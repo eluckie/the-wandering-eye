@@ -1,22 +1,29 @@
-import Logo from "./../img/Cover.png";
 import './../App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from "./Header";
+import AboutMe from "./AboutMe";
+import Home from "./Home";
+import PlayControl from "./PlayControl";
+import Browse from "./Browse";
+import ZineControl from "./ZineControl";
+import Game1 from "./Game1";
+import Game2 from "./Game2";
 
 function App() {
-  const photoStyles = {
-    height: 680,
-    width: 680,
-    borderRadius: "50%",
-    margin: 10
-  }
-  const divStyles = {
-    textAlign: "center"
-  }
-  
   return (
     <>
-      <div style={divStyles}>
-        <img style={photoStyles} src={Logo} alt=""/>
-      </div>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path="/about" element={<AboutMe/>}/>
+          <Route path="/play" element={<PlayControl/>}/>
+          <Route path="/browse" element={<Browse/>}/>
+          <Route path="/zine" element={<ZineControl/>}/>
+          <Route path="/game1" element={<Game1/>}/>
+          <Route path="/game2" element={<Game2/>}/>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+      </Router>
     </>
   );
 }
