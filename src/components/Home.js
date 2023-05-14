@@ -1,7 +1,7 @@
 import Logo from "./../img/Cover.png";
 import { Link } from "react-router-dom";
 
-function Home(props) {
+function Home() {
   const photoStyles = {
     height: 680,
     width: 680,
