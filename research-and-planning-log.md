@@ -32,3 +32,5 @@
 >#### 5/12/23
 >* **9a**: choose photos for zine trips - pismo, socal done. monterey/carmel half done
 >* **945a**: begin setting up file structure for final project
+>* **11a**: BREAK. continue working on reducer after
+>* **3p**: work on adding game 1 gameplay

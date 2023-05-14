@@ -1,9 +1,10 @@
-import GameStart from "./GameStart";
 import { Link } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
-import Game1Play from "./Game1Play";
+import GameStatusView from "./GameStatus";
+import Game1View from "./Game1View";
+import GameStartView from "./GameStart";
 
-function PlayControl() {
+
+function Game1Play() {
   const linkStyles = {
     padding: 20,
     display: "inline",
@@ -16,19 +17,19 @@ function PlayControl() {
 
   return (
     <>
+      <GameStatusView/>
+      <Game1View/>
+      <br/><br/>
+      <GameStartView/>
+      <br/><br/><br/><br/>
       <div style={divStyles}>
-        <GameStart/>
-        <br/><br/><br/><br/><br/><br/>
         <Link to="/"><p style={linkStyles}>home</p></Link>
         <Link to="/zine"><p style={linkStyles}>zine</p></Link>
         <Link to="/about"><p style={linkStyles}>about</p></Link>
         <br/>
       </div>
-      <Routes>
-        <Route path="/game1" element={<Game1Play/>}/>
-      </Routes>
     </>
   );
 }
 
-export default PlayControl;
+export default Game1Play;

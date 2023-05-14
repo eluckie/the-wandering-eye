@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom"
+import { connect } from "react-redux";
+import { initGame as initGame1 } from "../actions/actions";
+import { shuffleTiles } from "../actions/actions";
+import PropTypes from "prop-types";
 
 function GameStart(props) {
+  const { onInitGame1 } = props;
+
   const divStyles = {
     textAlign: "center"
   }
@@ -44,16 +49,30 @@ function GameStart(props) {
   return (
     <>
       <div style={divStyles}>
-        <p>choose your color</p>
-        <Link to="/game1"><div style={colorPalette1Styles}></div></Link>
-        <Link to="/game1"><div style={colorPalette2Styles}></div></Link>
-        <Link to="/game1"><div style={colorPalette3Styles}></div></Link>
-        <Link to="/game2"><div style={colorPalette4Styles}></div></Link>
-        <Link to="/game2"><div style={colorPalette5Styles}></div></Link>
-        <Link to="/game2"><div style={colorPalette6Styles}></div></Link>
+        <div onClick={() => onInitGame1(1)} style={colorPalette1Styles}></div>
+        <div onClick={() => onInitGame1(2)} style={colorPalette2Styles}></div>
+        <div onClick={() => onInitGame1(3)} style={colorPalette3Styles}></div>
+        <div onClick={() => onInitGame1(4)} style={colorPalette4Styles}></div>
+        <div onClick={() => onInitGame1(5)} style={colorPalette5Styles}></div>
+        <div onClick={() => onInitGame1(6)} style={colorPalette6Styles}></div>
       </div>
     </>
   );
 }
 
-export default GameStart;
+GameStart.propTypes = {
+  onInitGame1: PropTypes.func
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onInitGame1: (imageNumber) => {
+      dispatch(initGame1(imageNumber));
+      dispatch(shuffleTiles());
+    }
+  };
+};
+
+const GameStartView = connect(null, mapDispatchToProps)(GameStart);
+
+export default GameStartView;
