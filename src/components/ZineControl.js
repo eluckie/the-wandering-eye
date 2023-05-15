@@ -17,6 +17,7 @@ function ZineControl() {
       <Header/>
       <Link to="/zine/video"><button style={buttonStyles}>video</button></Link>
       <Link to="/zine/pages"><button style={buttonStyles}>pages</button></Link>
+      <br/><br/>
       <Routes>
         <Route path="/video" element={<ZineVideo/>}/>
         <Route path="/pages" element={<ZinePages/>}/>

@@ -1,7 +1,9 @@
+import Cover from "./../img/Cover.png";
+
 function ZinePages() {
   return (
     <>
-      <h1>static zine placeholder</h1>
+      <img src={Cover} alt="the wandering eye zine cover"/>
     </>
   );
 }

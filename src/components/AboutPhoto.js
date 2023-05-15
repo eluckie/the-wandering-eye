@@ -2,7 +2,6 @@ import Selfie from "./../img/selfie.jpg";
 
 function AboutPhoto() {
   const eyeShapeStyles = {
-    border: "2px solid black",
     height: "540px",
     width: "540px",
     borderRadius: "99% 0",
@@ -17,8 +16,7 @@ function AboutPhoto() {
   const selfieStyles = {
     width: 270,
     height: 280,
-    borderRadius: "50%",
-    border: "2px solid black"
+    borderRadius: "50%"
   }
 
   return (
@@ -26,7 +24,7 @@ function AboutPhoto() {
       <div id="eye-div" style={eyeShapeStyles}>
           <br/><br/><br/><br/><br/><br/><br/>
           <div style={aboutDivStyles}>
-            <img style={selfieStyles} src={Selfie} alt="selfie"/>
+            <img id="selfie" style={selfieStyles} src={Selfie} alt="selfie"/>
           </div>
       </div>
     </>

@@ -9,7 +9,7 @@ function Header() {
 
   return (
     <>
-      <p style={headerStyles}>t h e <span style={headerWanderingStyles}>w a n d e r i n g</span> e y e</p>
+      <h1 style={headerStyles}>t h e <span style={headerWanderingStyles}>w a n d e r i n g</span> e y e</h1>
     </>
   );
 }
