@@ -12,3 +12,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.grid-child {
+  display: inline-block;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#page-links:hover {
+  background: linear-gradient(to top left, #4c7e1b 0%, #999966 100%);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+}
+
+#contact-links:hover {
+  background: linear-gradient(to top left, #468cd6 0%, #d2d275 100%);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  padding: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: darkgray;
+}
+
+#eye-div {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: 2s;
+}
+
+#eye-div:hover {
+  background:darkgreen;
+  box-shadow: 0 0 0 30px rgb(83, 224, 83), 
+              0 0 0 60px rgb(83, 224, 83),
+              0 0 0 100px rgb(83, 224, 83),
+              0 0 0 120px rgb(82, 226, 82), 
+              0 0 0 200px rgb(37, 214, 37),
+              0 0 0 400px rgb(27, 165, 27), 
+              0 0 0 450px rgb(63, 235, 63);
+}

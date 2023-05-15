@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Header from "./Header";
 
 function Browse() {
   const divStyles = {
@@ -7,10 +7,6 @@ function Browse() {
     width: 400,
     margin: "auto"
   }
-
-  const linkStyles = {
-    textAlign: "center"
-  }
   
   const headerStyles = {
     color: "red"
@@ -18,12 +14,12 @@ function Browse() {
 
   return (
     <>
+      <Header/>
+      <br/><br/>
       <div style={divStyles}>
         <h1 style={headerStyles}>PAGE UNDER CONSTRUCTION</h1>
         <h3>browse feature coming soon</h3>
       </div>
-      <br/><br/><br/><br/>
-      <Link to="/"><p style={linkStyles}>go home</p></Link>
     </>
   );
 }

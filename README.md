@@ -4,16 +4,15 @@
 
 #### This application will act as an interactive photo portfolio - with a twist. Users are able to view a digital zine, play a sliding puzzle game with select photos from the collection, and browse additional photos.
 
-### Table of Contents
+<!-- ### Table of Contents
 
 _{add clickable or dropdown}_
-
+ -->
 
 ## Technologies Used
 
-* React - ui
-* JSX - ui
-* NoSQL - backend
+* React
+* JSX
 * HTML
 * CSS
 * JavaScript
@@ -21,13 +20,16 @@ _{add clickable or dropdown}_
 * npm
 * Markdown
 * Canva
-* Firebase
 * Git
-
+<!-- * NoSQL - backend -->
+<!-- * Firebase -->
 
 ## Setup/Installation Requirements
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+1. Clone this repository to your desktop
+2. Navigate to the top level of this directory called ``the-wandering-eye``
+3. Run the code ``npm install`` in your terminal to install the necessary packages and plug-ins
+4. Run the code ``npm run start`` in your terminal to start the application and open the project in your web browser
 
 
 ## Description
@@ -50,28 +52,21 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No known bugs.
 
 ## Stretch Plans
-
-<!--
-* Firebase - NoSQL (high scores) & hosting
-* DIGITAL ZINE - canva, sort by month (video format)
-* choosing puzzle from color palette - (2 games/3 each, randomize difficulty onClick)
-* SLIDING PUZZLE GAME - with high scores board. high scores viewable from each game home page? (using button)
-* EASTER EGG - hidden onClick that does annoying little window.alert popup
-
-* create webapi to browse photos (not in zine form) - NoSQL (save images to project & save paths/alt/filters to db to render ?)
+* create webapi to browse photos (NoSQL)
+* add sliding puzzle game
+* add high scores board for games
+* user upload to create custom sliding puzzles on demand
 * custom domain
-* user upload to create custom sliding puzzles on demand -->
+<!-- * EASTER EGG - hidden onClick that does annoying little window.alert popup -->
 
 ## License
 
 MIT License
 
 Copyright (c) 2023 Luckie
-
 
 __________
 

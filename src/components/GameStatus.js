@@ -7,6 +7,7 @@ function GameStatus(props) {
   if (gameComplete) {
     return (
       <>
+        <br/>
         <p>
           GAME FINISHED<br/>
           You used {turnNo - 1} turns<br/><br/>
@@ -17,12 +18,14 @@ function GameStatus(props) {
   } else if (!imageNumber) {
     return (
       <>
+        <br/>
         <p>choose your color</p>
       </>
     )
   } else {
     return (
       <>
+        <br/>
         <p>turn {turnNo}</p>
         <div className="game-instructions">
           {clicksWithinTurn === 0 && (

@@ -1,63 +1,65 @@
-import { Link } from "react-router-dom";
-import PlaceholderImg from "./../img/placeholder.png";
+import AboutPhoto from "./AboutPhoto";
+import MyInfo from "./MyInfo";
+import PhotoInfo from "./PhotoInfo";
+import Header from "./Header";
+import { useState } from "react";
 
 function AboutMe() {
-  const divStyles = {
-    textAlign: "center",
-    width: 600,
-    height: 600,
-    border: "2px black solid",
+  const buttonStyles = {
+    height: 80,
+    width: 80,
     borderRadius: "50%",
-    margin: "auto"
+    margin: 10
   }
 
-  const photoInfoDivStyles = {
-    textAlign: "center",
-    width: 300,
-    height: 300,
-    border: "2px black solid",
-    borderRadius: 50,
-    padding: 20,
-    float: "right",
-    margin: 20
+  const [showMyInfo, setShowMyInfo] = useState(false);
+  const [showPhotoInfo, setShowPhotoInfo] = useState(false);
+  const [ready, setReady] = useState(true);
+
+  const showMe = () => {
+    setReady(false);
+    setShowMyInfo(true);
+    setShowPhotoInfo(false);
+    setReady(true);
   }
 
-  const placeholderPhotoStyles = {
-    width: 280
-  }
-  
-  const linkStyles = {
-    padding: 20,
-    display: "inline",
-    margin: "auto"
+  const showPhotos = () => {
+    setReady(false);
+    setShowMyInfo(false);
+    setShowPhotoInfo(true);
+    setReady(true);
   }
 
-  return (
-    <>
-      <div style={photoInfoDivStyles}>
-        <h4>about my photos</h4>
-        <hr/>
-        <p>
-          all photos shot with an iphone 11<br/><br/>
-          hashtag what filter
-        </p>
-      </div>
-      <div style={divStyles}>
-        <br/><br/>
-        <img style={placeholderPhotoStyles} src={PlaceholderImg} alt=""/>
-        <br/><br/>
-        <h2>my name's luckie</h2>
-        <p>and this is just a little bit of information about me</p>
-      </div>
-      <br/><br/>
-      <div>
-        <Link to="/"><p style={linkStyles}>home</p></Link>
-        <Link to="/zine"><p style={linkStyles}>zine</p></Link>
-        <Link to="/play"><p style={linkStyles}>play</p></Link>
-      </div>
-      <br/>
-    </>
-  );
+  if (!ready) {
+    return <h1>... loading ...</h1>
+  } else if (showMyInfo) {
+    return (
+      <>
+        <Header/>
+        <button onClick={showPhotos} style={buttonStyles}>my photos</button>
+        <MyInfo/>
+        <AboutPhoto/>
+      </>
+    );
+  } else if (showPhotoInfo) {
+    return (
+      <>
+        <Header/>
+        <button onClick={showMe} style={buttonStyles}>me</button>
+        <PhotoInfo/>
+        <AboutPhoto/>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Header/>
+        <button onClick={showMe} style={buttonStyles}>me</button>
+        <button onClick={showPhotos} style={buttonStyles}>my photos</button>
+        <AboutPhoto/>
+      </>
+    );
+  }
 }
 
 export default AboutMe;
