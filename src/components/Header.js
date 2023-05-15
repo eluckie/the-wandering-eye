@@ -1,15 +1,15 @@
+import HeaderPhoto from "./../img/header.png";
+
 function Header() {
-  const headerWanderingStyles = {
-    fontSize: 46,
-    padding: 20
-  }
-  const headerStyles = {
-    padding: 10
+    const photoStyles = {
+    borderRadius: "0.7rem"
   }
 
   return (
     <>
-      <h1 style={headerStyles}>t h e <span style={headerWanderingStyles}>w a n d e r i n g</span> e y e</h1>
+      <img style={photoStyles} src={HeaderPhoto} alt="the wandering eye logo"/>
+      <br/>
+      <br/>
     </>
   );
 }
