@@ -3,6 +3,7 @@ import MyInfo from "./MyInfo";
 import PhotoInfo from "./PhotoInfo";
 import Header from "./Header";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function AboutMe() {
   const buttonStyles = {
@@ -34,30 +35,39 @@ function AboutMe() {
     return <h1>... loading ...</h1>
   } else if (showMyInfo) {
     return (
-      <>
+      <motion.div
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}>
         <Header/>
         <button onClick={showPhotos} style={buttonStyles}>my photos</button>
         <MyInfo/>
         <AboutPhoto/>
-      </>
+      </motion.div>
     );
   } else if (showPhotoInfo) {
     return (
-      <>
+      <motion.div
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}>
         <Header/>
         <button onClick={showMe} style={buttonStyles}>me</button>
         <PhotoInfo/>
         <AboutPhoto/>
-      </>
+      </motion.div>
     );
   } else {
     return (
-      <>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}>
         <Header/>
         <button onClick={showMe} style={buttonStyles}>me</button>
         <button onClick={showPhotos} style={buttonStyles}>my photos</button>
         <AboutPhoto/>
-      </>
+      </motion.div>
     );
   }
 }
