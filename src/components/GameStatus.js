@@ -9,7 +9,6 @@ function GameStatus(props) {
       <>
         <br/>
         <p>
-          GAME FINISHED<br/>
           You used {turnNo - 1} turns<br/><br/>
           choose another color
         </p>
