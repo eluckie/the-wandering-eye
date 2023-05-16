@@ -1,13 +1,15 @@
+import Video from "./../zine/the-wandering-eye-video.mp4";
+
 function ZineVideo() {
   const videoStyles = {
     position: "relative",
     width: "600px",
     height: 0,
-    paddingTop: "75.0000%",
+    paddingTop: "50.0000%",
     paddingBottom: 0,
     boxShadow: "0 2px 8px 0 rgba(63,69,81,0.16)",
-    marginTop: "1.6em",
-    marginBottom: "0.9em",
+    marginTop: "auto",
+    marginBottom: "auto",
     marginLeft: "auto",
     marginRight: "auto",
     overflow: "hidden",
@@ -30,7 +32,7 @@ function ZineVideo() {
     <>
       <div style={videoStyles}>
         <iframe title="wanderingEye" style={iFrameStyles}
-          src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFiD6UKMzA&#x2F;watch?embed" allowFullScreen="allowFullScreen">
+          src={Video} allowFullScreen="allowFullScreen">
         </iframe>
       </div>
     </>
