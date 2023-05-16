@@ -9,11 +9,12 @@ function PhotoInfo() {
 
   return (
     <>
-    <div style={divStyles}>
+      <br/><br/>
+      <div style={divStyles}>
         <p>
-            all photos shot with an iPhone 11<br/>
-            all shot by me<br/>
-            hashtag what filter
+          all photos shot with an iPhone 11<br/>
+          all shot by me<br/>
+          hashtag what filter
         </p>
       </div>
     </>

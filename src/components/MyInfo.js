@@ -20,8 +20,8 @@ function MyInfo() {
         </p>
         <h3>my name's Luckie</h3>
         <p>
-            originally from California<br/>
-            currently in Colorado<br/>
+          originally from California<br/>
+          currently in Colorado<br/>
         </p>
       </div>
     </>

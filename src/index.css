@@ -29,6 +29,10 @@ code {
   display: none;
 }
 
+.zinePage {
+  border: 4px solid lightgray;
+}
+
 #page-links:hover {
   background: linear-gradient(to top left, #4c7e1b 0%, #999966 100%);
   border-radius: 50%;
