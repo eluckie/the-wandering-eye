@@ -6,11 +6,17 @@ import { motion } from "framer-motion";
 
 function ZineControl() {
   const buttonStyles = {
-    height: 80,
+    height: 70,
     width: 80,
-    borderRadius: 50,
     padding: 20,
     margin: 20
+  }
+
+  const buttonText = {
+    fontWeight: "bold",
+    fontSize: 16,
+    textAlign: "center",
+    color: "black"
   }
 
   return (
@@ -19,8 +25,8 @@ function ZineControl() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Header/>
-      <Link to="/zine/video"><button style={buttonStyles}>video</button></Link>
-      <Link to="/zine/pages"><button style={buttonStyles}>pages</button></Link>
+      <Link to="/zine/video"><button style={buttonStyles}><span style={buttonText}>video</span></button></Link>
+      <Link to="/zine/pages"><button style={buttonStyles}><span style={buttonText}>pages</span></button></Link>
       <br/><br/>
       <Routes>
         <Route path="/video" element={<ZineVideo/>}/>

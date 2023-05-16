@@ -16,7 +16,9 @@ function AboutPhoto() {
   const selfieStyles = {
     width: 270,
     height: 280,
-    borderRadius: "50%"
+    borderRadius: "50%",
+    overflow: "hidden",
+    transition: "transform 0.25s"
   }
 
   return (
@@ -24,7 +26,7 @@ function AboutPhoto() {
       <div id="eye-div" style={eyeShapeStyles}>
           <br/><br/><br/><br/><br/><br/><br/>
           <div style={aboutDivStyles}>
-            <img id="selfie" style={selfieStyles} src={Selfie} alt="selfie"/>
+            <img id="hover" style={selfieStyles} src={Selfie} alt="selfie"/>
           </div>
       </div>
     </>

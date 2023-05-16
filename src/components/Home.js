@@ -6,8 +6,10 @@ function Home() {
   const photoStyles = {
     height: 680,
     width: 680,
+    overflow: "hidden",
     borderRadius: "50%",
-    margin: 10
+    margin: 10,
+    transition: "transform 0.25s"
   }
   
   const divStyles = {
@@ -22,7 +24,7 @@ function Home() {
         borderRadius: ["20%", "20%", "50%", "50%", "20%"],
       }}>
       <div style={divStyles}>
-        <Link to="/browse"><img style={photoStyles} src={Logo} alt=""/></Link>
+        <Link to="/browse"><img id="hover" style={photoStyles} src={Logo} alt=""/></Link>
       </div>
     </motion.div>
   );

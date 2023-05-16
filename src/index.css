@@ -14,6 +14,21 @@ code {
     monospace;
 }
 
+button {
+  cursor: pointer;
+  background: url("./img/icon.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -39,6 +54,7 @@ code {
   border-radius: 50%;
   color: white;
   font-weight: bold;
+  font-size: larger;
 }
 
 #contact-links:hover {
@@ -54,6 +70,22 @@ a {
   color: darkgray;
 }
 
+#hover:hover {
+  transform: scale(1.1);
+}
+
+#palette {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+#palette:hover {
+  transform: scale(1.1);
+}
+
 #eye-div {
   width: 20px;
   height: 20px;
@@ -63,7 +95,7 @@ a {
 }
 
 #eye-div:hover {
-  background:darkgreen;
+  background:lightpink;
   border: 2px solid black;
   box-shadow: 0 0 0 30px rgb(83, 224, 83), 
               0 0 0 60px rgb(83, 224, 83),
@@ -72,8 +104,4 @@ a {
               0 0 0 200px rgb(37, 214, 37),
               0 0 0 400px rgb(27, 165, 27), 
               0 0 0 450px rgb(63, 235, 63);
-}
-
-#selfie:hover {
-  border: 2px solid black;
 }
