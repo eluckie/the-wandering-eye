@@ -2,7 +2,8 @@ import HeaderPhoto from "./../img/header.png";
 
 function Header() {
     const photoStyles = {
-    borderRadius: "0.7rem"
+    borderRadius: "0.9rem",
+    width: 900
   }
 
   return (
