@@ -1,4 +1,4 @@
-# Capstone
+# The Wandering Eye
 
 #### By E. Luckie ☀️
 
@@ -17,6 +17,7 @@ _{add clickable or dropdown}_
 * CSS
 * JavaScript
 * Webpack
+* Framer Motion
 * npm
 * Markdown
 * Canva
@@ -50,9 +51,11 @@ _{This is a detailed description of your application. Give as much detail as nee
 #### Landing Pages
 ![diagram of landing pages for home, zine, play, and about me pages](./src/img/capstone-landing-pages.png)
 
+
 ## Known Bugs
 
 * No known bugs.
+
 
 ## Stretch Plans
 * create webapi to browse photos (NoSQL)
@@ -61,6 +64,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 * user upload to create custom sliding puzzles on demand
 * custom domain
 <!-- * EASTER EGG - hidden onClick that does annoying little window.alert popup -->
+
 
 ## License
 

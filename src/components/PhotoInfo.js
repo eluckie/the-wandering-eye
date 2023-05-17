@@ -19,7 +19,7 @@ function PhotoInfo() {
         <br/>
         <a id="contact-links" href="https://www.instagram.com/yellowpistols/?hl=en" target="_blank" rel="noreferrer">see more photos</a>
         <br/><br/>
-        <h3>all photos shot by me with an iPhone 11</h3>
+        <h3>all photos shot by me with an iPhone 12</h3>
         <p>
           Among these photos you'll find my daily travels as well as actual intended trips. The locations may vary, but some of the states you'll see are:<br/>
           <ul style={listStyles}>

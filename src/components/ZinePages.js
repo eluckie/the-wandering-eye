@@ -41,7 +41,8 @@ function ZinePages() {
   }
 
   const bookStyles = {
-    margin: "auto"
+    margin: "auto",
+    cursor: "pointer"
   }
 
   return (

@@ -19,7 +19,7 @@ function MyInfo() {
           originally from California<br/>
           currently in Colorado
         </h4>
-        <h5 id="accent">2022 changed my life.</h5>
+        <h5 id="accent">2022 changed my life</h5>
         <p>
           I left the only home I'd ever known to travel all over the country, mostly alone. I discovered multiple new interests including traveling, landscape photography, and web development. This project marks the beginning of bringing all of my newfound passions together.
         </p>
