@@ -6,8 +6,8 @@
 
 <!-- ### Table of Contents
 
-_{add clickable or dropdown}_
- -->
+_{add clickable or dropdown}_ -->
+
 
 ## Technologies Used
 
@@ -35,9 +35,32 @@ _{add clickable or dropdown}_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This webpage acts as an interactive photo portfolio for my personal landscape photographs. From the navbar on each page, users are able to navigate to the ``home``, ``zine``, ``play``, or ``about`` pages. On the home page, if you click on the site's logo, it will also take you to the ``browse`` page - a current work-in-progress.
 
 <!-- [Click here](https://eluckie.github.io/_______/) to view the live version of this webpage. -->
+
+>#### Zine
+>* has clickable options to view the video or pages version of the digital zine
+>* clicking **video** loads & automatically starts playing the video version of the digital zine
+>* clicking **pages** loads the zine in flipbook format. click on the right of the photo to flip to the next page, the left to flip to the previous
+>* _NOTE: default is showing 2 pages at a time but if the window is resized smaller than the size of the doubled zine pages, it will display one page at a time_ 
+
+>#### Play
+>* on first visit, only a clickable color palette will display. choose a color to begin a game
+>* the game will randomize difficulty between 3x3, 4x4, 5x5, or 6x6
+>* to start a new game, click on a new color on the color palette. to choose a different randomized difficulty, click on the same color again
+>* user clicks on two tiles to switch their positions until all tiles are in the proper spot & the game is finished
+>* on game finish, the entire full photo is revealed as well as the amount of turns it took to complete
+>* **high scores board coming soon**
+
+>#### About
+>* learn more information about me and my photos
+>* clicking **me** displays a small blurb about me including links to my virtual resume as well as my github profile
+>* clicking **photos** displays a small blurb about my photos including a link to instagram to see more
+>* _if you hover over my selfie, it turns me into a radiating eyeball._ move your cursor after to see the reverse effect
+
+>#### Browse
+>* **coming soon**
 
 
 ## Diagrams
