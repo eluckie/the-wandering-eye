@@ -18,7 +18,7 @@ function MyInfo() {
         <p>
           <a id="contact-links" style={linkStyles} href="https://eluckie.github.io/resume/" target="_blank" rel="noreferrer">virtual resume</a> <a id="contact-links" style={linkStyles} href="https://github.com/eluckie" target="_blank" rel="noreferrer">github profile</a>
         </p>
-        <h3>my name's Luckie</h3>
+        <h2>my name's Luckie</h2>
         <p>
           originally from California<br/>
           currently in Colorado<br/>

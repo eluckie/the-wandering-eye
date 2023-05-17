@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const linkStyles = {
-    padding: 20,
-    display: "inline",
-    margin: "auto"
-  }
-
   const divStyles = {
     margin: "auto"
   }
@@ -15,10 +9,10 @@ function Footer() {
     <>
       <br/><br/><br/><br/>
       <div style={divStyles}>
-        <Link to="/"><p id="page-links" style={linkStyles}>home</p></Link>
-        <Link to="/zine"><p id="page-links" style={linkStyles}>zine</p></Link>
-        <Link to="/play"><p id="page-links" style={linkStyles}>play</p></Link>
-        <Link to="/about"><p id="page-links" style={linkStyles}>about</p></Link>
+        <Link to="/"><button>home</button></Link>
+        <Link to="/zine"><button>zine</button></Link>
+        <Link to="/play"><button>play</button></Link>
+        <Link to="/about"><button>about</button></Link>
         <br/><br/><br/>
       </div>
     </>
