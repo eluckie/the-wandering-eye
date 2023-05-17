@@ -1,9 +1,9 @@
-import HeaderPhoto from "./../img/header.png";
+import HeaderPhoto from "./../img/header-no-title.png";
 
 function Header() {
     const photoStyles = {
-    borderRadius: "0.9rem",
-    width: 900
+    width: "100%",
+    height: 100
   }
 
   return (

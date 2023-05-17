@@ -1,4 +1,5 @@
 import Logo from "./../img/Cover.png";
+import NavLinks from './NavLinks';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -26,6 +27,7 @@ function Home() {
       <div style={divStyles}>
         <Link to="/browse"><img id="hover" style={photoStyles} src={Logo} alt=""/></Link>
       </div>
+      <NavLinks/>
     </motion.div>
   );
 }

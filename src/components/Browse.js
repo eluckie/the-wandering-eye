@@ -1,4 +1,6 @@
 import Header from "./Header";
+import NavLinks from './NavLinks';
+import Footer from './Footer';
 import { motion } from "framer-motion";
 
 function Browse() {
@@ -19,11 +21,13 @@ function Browse() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Header/>
-      <br/><br/>
+      <br/><br/><br/><br/><br/>
       <div style={divStyles}>
         <h1 style={headerStyles}>PAGE UNDER CONSTRUCTION</h1>
         <h3>browse feature coming soon</h3>
       </div>
+      <NavLinks/>
+      <Footer/>
     </motion.div>
   );
 }

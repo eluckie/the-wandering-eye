@@ -2,6 +2,8 @@ import AboutPhoto from "./AboutPhoto";
 import MyInfo from "./MyInfo";
 import PhotoInfo from "./PhotoInfo";
 import Header from "./Header";
+import NavLinks from './NavLinks';
+import Footer from './Footer';
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -43,6 +45,8 @@ function AboutMe() {
         <button onClick={showPhotos}><span style={buttonText}>photos</span></button>
         <MyInfo/>
         <AboutPhoto/>
+        <NavLinks/>
+        <Footer/>
       </motion.div>
     );
   } else if (showPhotoInfo) {
@@ -55,6 +59,8 @@ function AboutMe() {
         <button onClick={showMe}><span style={buttonText}>me</span></button>
         <PhotoInfo/>
         <AboutPhoto/>
+        <NavLinks/>
+        <Footer/>
       </motion.div>
     );
   } else {
@@ -68,6 +74,8 @@ function AboutMe() {
         <button onClick={showPhotos}><span style={buttonText}>photos</span></button>
         <br/><br/>
         <AboutPhoto/>
+        <NavLinks/>
+        <Footer/>
       </motion.div>
     );
   }

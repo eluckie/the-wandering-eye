@@ -1,20 +1,16 @@
-import { Link } from "react-router-dom";
+import BottomBorder from "./../img/header-no-title.png";
 
 function Footer() {
-  const divStyles = {
-    margin: "auto"
+    const photoStyles = {
+    width: "100%",
+    height: 100
   }
 
   return (
     <>
-      <br/><br/><br/><br/>
-      <div style={divStyles}>
-        <Link to="/"><button>home</button></Link>
-        <Link to="/zine"><button>zine</button></Link>
-        <Link to="/play"><button>play</button></Link>
-        <Link to="/about"><button>about</button></Link>
-        <br/><br/><br/>
-      </div>
+      <img style={photoStyles} src={BottomBorder} alt="the wandering eye logo"/>
+      <br/>
+      <br/>
     </>
   );
 }

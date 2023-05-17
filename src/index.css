@@ -59,7 +59,6 @@ button:hover {
 
 #page-links:hover {
   color: black;
-  font-weight: bold;
   background: url("./img/icon.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -67,12 +66,17 @@ button:hover {
   transform: scale(1.1);
 }
 
+#contact-links {
+  margin: 20;
+  padding: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
 #contact-links:hover {
-  background: linear-gradient(to top left, #468cd6 0%, #d2d275 100%);
   border-radius: 50%;
+  background: linear-gradient(to top left, #468cd6 0%, #d2d275 100%);
   color: white;
   font-weight: bold;
-  padding: 16px;
 }
 
 a {
@@ -114,4 +118,8 @@ a {
               0 0 0 200px rgb(37, 214, 37),
               0 0 0 400px rgb(27, 165, 27), 
               0 0 0 450px rgb(63, 235, 63);
+}
+
+#accent {
+  color:rgb(27, 165, 27);
 }

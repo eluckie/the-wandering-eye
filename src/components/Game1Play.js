@@ -2,6 +2,8 @@ import GameStatusView from "./GameStatus";
 import Game1View from "./Game1View";
 import GameStartView from "./GameStart";
 import Header from "./Header";
+import NavLinks from './NavLinks';
+import Footer from './Footer';
 import { motion } from "framer-motion";
 
 function Game1Play() {
@@ -15,6 +17,8 @@ function Game1Play() {
       <Game1View/>
       <br/><br/>
       <GameStartView/>
+      <NavLinks/>
+      <Footer/>
     </motion.div>
   );
 }
