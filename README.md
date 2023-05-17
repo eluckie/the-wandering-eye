@@ -2,7 +2,7 @@
 
 #### By E. Luckie ☀️
 
-#### This application will act as an interactive photo portfolio - with a twist. Users are able to view a digital zine, play a sliding puzzle game with select photos from the collection, and browse additional photos.
+#### This application will act as an interactive photo portfolio - with a twist. Users are able to view a digital zine, play a puzzle game with select photos from the collection, and browse additional photos.
 
 <!-- ### Table of Contents
 

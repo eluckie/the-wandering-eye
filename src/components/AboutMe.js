@@ -72,6 +72,7 @@ function AboutMe() {
         <Header/>
         <button onClick={showMe} style={buttonStyles}><span style={buttonText}>me</span></button>
         <button onClick={showPhotos} style={buttonStyles}><span style={buttonText}>photos</span></button>
+        <br/><br/>
         <AboutPhoto/>
       </motion.div>
     );

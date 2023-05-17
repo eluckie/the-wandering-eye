@@ -8,34 +8,33 @@ function GameStatus(props) {
     return (
       <>
         <br/>
-        <p>
-          You used {turnNo - 1} turns<br/><br/>
-          choose another color
-        </p>
+        <h2>You used {turnNo - 1} turns</h2>
+        <p>choose another color</p>
+        <br/>
       </>
     );
   } else if (!imageNumber) {
     return (
       <>
         <br/>
-        <p>choose your color</p>
+        <h3>choose your color</h3>
       </>
     )
   } else {
     return (
       <>
         <br/>
-        <p>turn {turnNo}</p>
+        <h3>turn {turnNo}</h3>
         <div className="game-instructions">
           {clicksWithinTurn === 0 && (
-            <div>
-              click on the tile that should be moved
-            </div>
+            <p>
+              click on a tile to move
+            </p>
           )}
           {clicksWithinTurn === 1 && (
-            <div>
-              click on the tile to swap with the first
-            </div>
+            <p>
+              click on a tile to swap with the first
+            </p>
           )}
         </div>
       </>
