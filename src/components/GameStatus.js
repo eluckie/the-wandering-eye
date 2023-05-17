@@ -28,12 +28,12 @@ function GameStatus(props) {
         <div className="game-instructions">
           {clicksWithinTurn === 0 && (
             <p>
-              click on a tile to move
+              click on a tile to select
             </p>
           )}
           {clicksWithinTurn === 1 && (
             <p>
-              click on a tile to swap with the first
+              click on a tile to swap with this one
             </p>
           )}
         </div>
