@@ -1,6 +1,6 @@
-import GameStatusView from "./GameStatus";
+import Game1Status from "./Game1Status";
 import Game1View from "./Game1View";
-import GameStartView from "./GameStart";
+import Game1Start from "./Game1Start";
 import Banner from "./Banner";
 import NavLinks from './NavLinks';
 import { motion } from "framer-motion";
@@ -12,10 +12,10 @@ function Game1Play() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Banner/>
-      <GameStatusView/>
+      <Game1Status/>
       <Game1View/>
       <br/><br/>
-      <GameStartView/>
+      <Game1Start/>
       <NavLinks/>
       <Banner/>
     </motion.div>

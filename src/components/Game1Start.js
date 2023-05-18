@@ -55,6 +55,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const GameStartView = connect(null, mapDispatchToProps)(GameStart);
+const Game1Start = connect(null, mapDispatchToProps)(GameStart);
 
-export default GameStartView;
+export default Game1Start;

@@ -58,6 +58,6 @@ const mapStateToProps = (state) => {
   };
 }
 
-const GameStatusView = connect(mapStateToProps)(GameStatus);
+const Game1Status = connect(mapStateToProps)(GameStatus);
 
-export default GameStatusView;
+export default Game1Status;
