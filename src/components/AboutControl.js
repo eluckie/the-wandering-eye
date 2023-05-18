@@ -1,13 +1,12 @@
 import AboutPhoto from "./AboutPhoto";
 import MyInfo from "./MyInfo";
 import PhotoInfo from "./PhotoInfo";
-import Header from "./Header";
+import Banner from "./Banner";
 import NavLinks from './NavLinks';
-import Footer from './Footer';
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-function AboutMe() {
+function AboutControl() {
   const buttonText = {
     fontWeight: "bold",
     fontSize: 16,
@@ -41,12 +40,12 @@ function AboutMe() {
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity: 0}}>
-        <Header/>
+        <Banner/>
         <button onClick={showPhotos}><span style={buttonText}>photos</span></button>
         <MyInfo/>
         <AboutPhoto/>
         <NavLinks/>
-        <Footer/>
+        <Banner/>
       </motion.div>
     );
   } else if (showPhotoInfo) {
@@ -55,12 +54,12 @@ function AboutMe() {
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity: 0}}>
-        <Header/>
+        <Banner/>
         <button onClick={showMe}><span style={buttonText}>me</span></button>
         <PhotoInfo/>
         <AboutPhoto/>
         <NavLinks/>
-        <Footer/>
+        <Banner/>
       </motion.div>
     );
   } else {
@@ -69,16 +68,16 @@ function AboutMe() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}>
-        <Header/>
+        <Banner/>
         <button onClick={showMe}><span style={buttonText}>me</span></button>
         <button onClick={showPhotos}><span style={buttonText}>photos</span></button>
         <br/><br/>
         <AboutPhoto/>
         <NavLinks/>
-        <Footer/>
+        <Banner/>
       </motion.div>
     );
   }
 }
 
-export default AboutMe;
+export default AboutControl;

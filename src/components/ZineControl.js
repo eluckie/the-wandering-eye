@@ -1,9 +1,8 @@
 import { Link, Routes, Route } from "react-router-dom";
 import ZineVideo from "./ZineVideo";
 import ZinePages from "./ZinePages";
-import Header from "./Header";
+import Banner from "./Banner";
 import NavLinks from './NavLinks';
-import Footer from './Footer';
 import { motion } from "framer-motion";
 
 function ZineControl() {
@@ -18,7 +17,7 @@ function ZineControl() {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
-      <Header/>
+      <Banner/>
       <br/><br/>
       <h2>choose your experience</h2>
       <br/><br/>
@@ -30,7 +29,7 @@ function ZineControl() {
         <Route path="/pages" element={<ZinePages/>}/>
       </Routes>
       <NavLinks/>
-      <Footer/>
+      <Banner/>
     </motion.div>
   );
 }

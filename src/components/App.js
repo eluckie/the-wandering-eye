@@ -1,4 +1,3 @@
-import './../css/App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AnimatedRoutes from './AnimatedRoutes';
 
