@@ -12,18 +12,19 @@ _{add clickable or dropdown}_ -->
 ## Technologies Used
 
 * React
+* Redux
 * JSX
 * HTML
 * CSS
 * JavaScript
-* Webpack
-* Framer Motion
-* npm
 * Markdown
+* Webpack
+* npm
+* Framer Motion
 * Canva
 * Git
-<!-- * NoSQL - backend -->
-<!-- * Firebase -->
+<!-- * NoSQL backend -->
+<!-- * Firebase hosting -->
 
 ## Setup/Installation Requirements
 
@@ -39,13 +40,13 @@ This webpage acts as an interactive photo portfolio for my personal landscape ph
 
 <!-- [Click here](https://eluckie.github.io/_______/) to view the live version of this webpage. -->
 
->#### Zine
+#### Zine
 >* has clickable options to view the video or pages version of the digital zine
 >* clicking **video** loads & automatically starts playing the video version of the digital zine
 >* clicking **pages** loads the zine in flipbook format. click on the right of the photo to flip to the next page, the left to flip to the previous
 >* _NOTE: default is showing 2 pages at a time but if the window is resized smaller than the size of the doubled zine pages, it will display one page at a time_ 
 
->#### Play
+#### Play
 >* on first visit, only a clickable color palette will display. choose a color to begin a game
 >* the game will randomize difficulty between 3x3, 4x4, 5x5, or 6x6
 >* to start a new game, click on a new color on the color palette. to choose a different randomized difficulty, click on the same color again
@@ -53,14 +54,42 @@ This webpage acts as an interactive photo portfolio for my personal landscape ph
 >* on game finish, the entire full photo is revealed as well as the amount of turns it took to complete
 >* **high scores board coming soon**
 
->#### About
+#### About
 >* learn more information about me and my photos
 >* clicking **me** displays a small blurb about me including links to my virtual resume as well as my github profile
 >* clicking **photos** displays a small blurb about my photos including a link to instagram to see more
 >* _if you hover over my selfie, it turns me into a radiating eyeball._ move your cursor after to see the reverse effect
 
->#### Browse
+#### Browse
 >* **coming soon**
+
+
+## Gameplay
+
+#### select game
+![play landing page](./src//img//choosegame.png)
+
+#### game start
+![start of game with jumbled tiles](./src/img/gamestart.png)
+
+#### select a tile
+![jumbled tiles with one tile selected](./src/img/turn1.png)
+
+#### select a second tile to swap
+_when in the correct position, tile has inner border_\
+![jumbled tiles with selected tiles switched](./src/img/turn2.png)
+
+#### on game win
+![full photo of green lizard from jumbled tiles](./src/img/gamewin.png)
+
+
+## Zine View
+
+#### video
+![screenshot of zine selection page showing video player](./src/img/video.png)
+
+#### pages
+![screenshot of zine selection page showing clickable zine](./src/img/pages.png)
 
 
 ## Diagrams
