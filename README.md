@@ -92,6 +92,12 @@ _when in the correct position, tile has inner border_\
 ![screenshot of zine selection page showing clickable zine](./src/img/pages.png)
 
 
+## About
+#### the wandering eye feature
+
+https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5-93d0-462a81ad553f
+
+
 ## Diagrams
 
 #### Site Diagram
