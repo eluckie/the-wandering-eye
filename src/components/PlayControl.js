@@ -1,12 +1,9 @@
-import Game1Status from "./Game1Status";
-import Game1View from "./Game1View";
-import Game1Start from "./Game1Start";
+import { Link } from "react-router-dom";
 import Banner from "./Banner";
 import NavLinks from './NavLinks';
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function Game1Play() {
+function PlayControl() {
   const buttonText = {
     fontWeight: "bold",
     fontSize: 16,
@@ -19,16 +16,16 @@ function Game1Play() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Banner/>
-      <Link to="/play/slider"><button><span style={buttonText}>change game</span></button></Link>
-      <br/>
-      <Game1Status/>
-      <Game1View/>
       <br/><br/>
-      <Game1Start/>
+      <h2>choose your game</h2>
+      <br/><br/>
+      <Link to="/play/puzzle"><button><span style={buttonText}>puzzle</span></button></Link>
+      <Link to="/play/slider"><button><span style={buttonText}>slider</span></button></Link>
+      <br/><br/><br/>
       <NavLinks/>
       <Banner/>
     </motion.div>
   );
 }
 
-export default Game1Play;
+export default PlayControl;
