@@ -1,6 +1,4 @@
-import { Link, Routes, Route } from "react-router-dom";
-import ZineVideo from "./ZineVideo";
-import ZinePages from "./ZinePages";
+import { Link} from "react-router-dom";
 import Banner from "./Banner";
 import NavLinks from './NavLinks';
 import { motion } from "framer-motion";
@@ -24,10 +22,6 @@ function ZineControl() {
       <Link to="/zine/video"><button><span style={buttonText}>video</span></button></Link>
       <Link to="/zine/pages"><button><span style={buttonText}>pages</span></button></Link>
       <br/><br/><br/>
-      <Routes>
-        <Route path="/video" element={<ZineVideo/>}/>
-        <Route path="/pages" element={<ZinePages/>}/>
-      </Routes>
       <NavLinks/>
       <Banner/>
     </motion.div>
