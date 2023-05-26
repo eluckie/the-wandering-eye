@@ -25,3 +25,17 @@ export function reverseTiles() {
     type: c.REVERSE_TILES
   };
 }
+
+export function initGame2(imageNumber) {
+  return {
+    type: c.INIT_GAME,
+    imageNumber
+  };
+}
+
+export function moveTile(id) {
+  return {
+    type: c.MOVE_TILE,
+    id
+  };
+}
