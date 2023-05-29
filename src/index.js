@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './../src/css/index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import tileGameReducer from "./reducers/tile-game-reducer";
+// import tileGameReducer from "./reducers/tile-game-reducer";
+// import sliderGameReducer from "./reducers/slider-game-reducer";
+import rootReducer from "./reducers/index";
 import { Provider } from 'react-redux';
 import { legacy_createStore as createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(tileGameReducer, composeEnhancers(
+const store = createStore(rootReducer, composeEnhancers(
     applyMiddleware(thunk)
 ));
 

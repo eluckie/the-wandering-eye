@@ -51,6 +51,12 @@ function Game1(props) {
         <img src={Puzzle6} alt=""/>
       );
     }
+  } else if (!tiles) {
+    return (
+      <>
+        <div></div>
+      </>
+    );
   } else {
     return (
       <>
@@ -87,11 +93,11 @@ Game1.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    difficulty: state.difficulty,
-    tiles: state.tiles,
-    imageNumber: state.imageNumber,
-    selectedId: state.selectedId,
-    gameComplete: state.gameComplete
+    difficulty: state.tileGamePlay.difficulty,
+    tiles: state.tileGamePlay.tiles,
+    imageNumber: state.tileGamePlay.imageNumber,
+    selectedId: state.tileGamePlay.selectedId,
+    gameComplete: state.tileGamePlay.gameComplete
   };
 }
 

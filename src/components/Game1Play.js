@@ -19,7 +19,7 @@ function Game1Play() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Banner/>
-      <Link to="/play/slider"><button><span style={buttonText}>change game</span></button></Link>
+      <Link to="/play/slider"><button><span style={buttonText}>play slider</span></button></Link>
       <br/>
       <Game1Status/>
       <Game1View/>

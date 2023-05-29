@@ -16,24 +16,32 @@ function Game2(props) {
     gridTemplateColumns: `repeat(${difficulty}, ${tileWidth}px)`
   }
 
-  return (
-    <>
-      <div style={tileWrapperStyle}>
-        <div style={tileContainerStyle}>
-          {tiles.map((tile, index) =>
-            <Game2Tile
-              key={index}
-              id={tile}
-              isCorrectPos={tile === (index + 1)}
-              imageNumber={imageNumber}
-              onTileClick={onTileClick}
-              tileWidth={tileWidth}
-              difficulty={difficulty}/>
-          )}
+  if (!tiles) {
+    return (
+      <>
+        <div></div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div style={tileWrapperStyle}>
+          <div style={tileContainerStyle}>
+            {tiles.map((tile, index) =>
+              <Game2Tile
+                key={index}
+                id={tile}
+                isCorrectPos={tile === (index + 1)}
+                imageNumber={imageNumber}
+                onTileClick={onTileClick}
+                tileWidth={tileWidth}
+                difficulty={difficulty}/>
+            )}
+          </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 }
 
 Game2.propTypes = {

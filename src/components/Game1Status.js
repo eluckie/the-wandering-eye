@@ -51,10 +51,10 @@ GameStatus.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    gameComplete: state.gameComplete,
-    turnNo: state.turnNo,
-    clicksWithinTurn: state.clicksWithinTurn,
-    imageNumber: state.imageNumber
+    gameComplete: state.tileGamePlay.gameComplete,
+    turnNo: state.tileGamePlay.turnNo,
+    clicksWithinTurn: state.tileGamePlay.clicksWithinTurn,
+    imageNumber: state.tileGamePlay.imageNumber
   };
 }
 
