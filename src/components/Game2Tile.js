@@ -7,11 +7,11 @@ import Puzzle5 from "./../img/5.jpg";
 import Puzzle6 from "./../img/6.jpg";
 
 function Game2Tile(props) {
-  const { id, difficulty, tileWidth, isCorrectPos, imageNumber, onTileClick } = props;
+  const { id, difficulty, tileWidth, isCorrectPos, imageNumber, onClick } = props;
 
   return (
     <>
-      <div className="tile" style={getStyleForTile(id, difficulty, tileWidth, isCorrectPos, imageNumber)} onClick={() => onTileClick(id)}>
+      <div className="tile" style={getStyleForTile(id, difficulty, tileWidth, isCorrectPos, imageNumber)} onClick={() => onClick(id)}>
       </div>
     </>
   );

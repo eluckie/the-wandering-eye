@@ -31,7 +31,7 @@ function Game2(props) {
               id={tile}
               isCorrectPos={tile === (index + 1)}
               imageNumber={imageNumber}
-              onTileClick={onTileClick}
+              onClick={onTileClick}
               tileWidth={tileWidth}
               difficulty={difficulty}/>
           )}

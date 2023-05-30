@@ -23,11 +23,9 @@ function GameStatus(props) {
   } else {
     return (
       <>
-        <br/>
-        <h5>imageNumber: {imageNumber}</h5>
         <h3>{moves} moves</h3>
         <div className="game-instructions">
-          <p>click on a surrounding tile to swap with the blank</p>
+          <p>click on a touching tile to swap with the blank</p>
         </div>
       </>
     );

@@ -1,6 +1,5 @@
 import * as t from "./slider-functions";
 import * as c from "./../actions/ActionTypes";
-// import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   moves: -1,
@@ -24,10 +23,10 @@ function sliderGame(state = initialState, action) {
       });
     }
     case c.MOVE_TILE: {
-      if (state.gameComplete || !t.tileIsMovable(action.id, state.difficulty, state.tiles)) {
+      if (state.gameComplete || !t.validTileChoice(state.difficulty, action.id, state.tiles)) {
         return state;
       }
-      return Object.assign({}, initialState, {
+      return Object.assign({}, state, {
         moves: state.moves + 1,
         tiles: t.swapTilesInTileSet(state.tiles, emptyTileId, action.id),
         gameComplete: t.allTilesAligned(state.tiles)

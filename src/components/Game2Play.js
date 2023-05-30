@@ -25,6 +25,7 @@ function Game2Play() {
       <br/>
       <Game2Status/>
       <Game2View/>
+      <br/><br/>
       <Game2ImageView/>
       <br/><br/><br/><br/>
       <Game2Start/>
