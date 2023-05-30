@@ -16,10 +16,15 @@ function Game2(props) {
     gridTemplateColumns: `repeat(${difficulty}, ${tileWidth}px)`
   }
 
+  const tilesList = tiles.join(". ");
+
   return (
     <>
-      <div style={tileWrapperStyle}>
-        <div style={tileContainerStyle}>
+      <h2>
+        tiles: {tilesList}
+      </h2>
+      <div className="tile-wrapper" style={tileWrapperStyle}>
+        <div className="tile-container" style={tileContainerStyle}>
           {tiles.map((tile, index) =>
             <Game2Tile
               key={index}

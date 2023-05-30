@@ -6,7 +6,7 @@ import Game2ImageView from "./Game2ImageView";
 import Game2Start from "./Game2Start";
 import Game2Status from "./Game2Status";
 import Game2View from "./Game2View";
-import { initGame2 } from "../actions/actions";
+// import { initGame2 } from "../actions/actions";
 
 function Game2Play() {
   const buttonText = {

@@ -11,7 +11,8 @@ function Game2Tile(props) {
 
   return (
     <>
-      <div style={getStyleForTile(id, difficulty, tileWidth, isCorrectPos, imageNumber)} onClick={() => onTileClick(id)} />
+      <div className="tile" style={getStyleForTile(id, difficulty, tileWidth, isCorrectPos, imageNumber)} onClick={() => onTileClick(id)}>
+      </div>
     </>
   );
 }
@@ -45,7 +46,7 @@ const getStyleForTile = (id, difficulty, tileWidth, isCorrectPos, imageNumber) =
   } else if (imageNumber === 3) {
     style.backgroundImage = `url('${Puzzle3}')`;
   } else if (imageNumber === 4) {
-    style.backgroundImage = `url(''${Puzzle4})`;
+    style.backgroundImage = `url('${Puzzle4}')`;
   } else if (imageNumber === 5) {
     style.backgroundImage = `url('${Puzzle5}')`;
   } else {
