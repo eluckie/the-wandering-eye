@@ -8,28 +8,30 @@ function GameStart(props) {
   const divStyles = {
     textAlign: "center"
   }
+
   const colorPalette1Styles = {
-    backgroundColor: "#ccffff"
+    backgroundColor: "#9cf9f9"
   }
   const colorPalette2Styles = {
-    backgroundColor: "#ffff66"
+    backgroundColor: "#41b5bd"
   }
   const colorPalette3Styles = {
-    backgroundColor: "#ff9966"
+    backgroundColor: "#39742a"
   }
   const colorPalette4Styles = {
-    backgroundColor: "#ff00ff"
+    backgroundColor: "#98b918"
   }
   const colorPalette5Styles = {
-    backgroundColor: "#0033cc"
+    backgroundColor: "#f6d83c"
   }
   const colorPalette6Styles = {
-    backgroundColor: "#66ff66"
+    backgroundColor: "#b95418"
   }
 
   return (
     <>
       <div style={divStyles}>
+        
         <div id="palette" onClick={() => onInitGame2(1)} style={colorPalette1Styles}></div>
         <div id="palette" onClick={() => onInitGame2(2)} style={colorPalette2Styles}></div>
         <div id="palette" onClick={() => onInitGame2(3)} style={colorPalette3Styles}></div>

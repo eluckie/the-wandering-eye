@@ -15,18 +15,3 @@
   display: grid;
   grid-gap: 0px;
 }
-
-/* .game2 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 10px;
-} */
-
-/* .fullImage {
-  grid-column-start: 1;
-  grid-column-end: span 1;
-}
-
-.gamePlay {
-  grid-column-end: span 2;
-} */
