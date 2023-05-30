@@ -26,7 +26,7 @@ Game2Tile.propTypes = {
   onTileClick: PropTypes.func
 };
 
-const getStyleForTile = (id, difficulty, tileWidth, isCorrectPos, imageNumber) => {
+function getStyleForTile(id, difficulty, tileWidth, isCorrectPos, imageNumber) {
   if (id === 0) {
     return {};
   }

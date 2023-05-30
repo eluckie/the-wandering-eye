@@ -26,9 +26,10 @@ function sliderGame(state = initialState, action) {
       if (state.gameComplete || !t.validTileChoice(state.difficulty, action.id, state.tiles)) {
         return state;
       }
-      const newTiles = t.swapTilesInTileSet(state.tiles, action.id, emptyTileId);
+      const newTilesArray = t.swapTilesInTileSet(state.tiles, action.id, emptyTileId);
+      const newTiles = newTilesArray.map((tile) => tile);
       const gameCompleteBool = t.allTilesAligned(state.tiles);
-      console.log("MOVE_TILE action: newTiles, gameComplete: ", newTiles, gameCompleteBool);
+      
       return Object.assign({}, state, {
         moves: state.moves + 1,
         tiles: newTiles,

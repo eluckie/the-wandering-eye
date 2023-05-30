@@ -20,6 +20,15 @@ function GameStatus(props) {
         <h3>choose your color</h3>
       </>
     )
+  } else if (moves === 1) {
+    return (
+      <>
+        <h3>1 move</h3>
+        <div className="game-instructions">
+          <p>click on a touching tile to swap with the blank</p>
+        </div>
+      </>
+    );
   } else {
     return (
       <>
