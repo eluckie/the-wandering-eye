@@ -2,7 +2,7 @@
 
 #### By E. Luckie ☀️
 
-#### This application will act as an interactive photo portfolio - with a twist. Users are able to view a digital zine, play a puzzle game with select photos from the collection, and browse additional photos.
+#### This application will act as an interactive photo portfolio - with a twist. Users are able to view a digital zine, play two different strategy games with select photos from the collection, and browse additional photos.
 
 <!-- ### Table of Contents
 
@@ -47,17 +47,19 @@ This webpage acts as an interactive photo portfolio for my personal landscape ph
 >* _NOTE: default is showing 2 pages at a time but if the window is resized smaller than the size of the doubled zine pages, it will display one page at a time_ 
 
 #### Play
->* on first visit, only a clickable color palette will display. choose a color to begin a game
+>* displays options between slider & puzzle game
+>* on first visit, after selecting which game, only a clickable color palette will display. choose a color to begin a game
 >* the game will randomize difficulty between 3x3, 4x4, 5x5, or 6x6
->* to start a new game, click on a new color on the color palette. to choose a different randomized difficulty, click on the same color again
->* user clicks on two tiles to switch their positions until all tiles are in the proper spot & the game is finished
+>* to start a new game, click on a new color on the color palette. to choose a different randomized difficulty, click on the same color again. to play the other game, click the **play puzzle** or **play slider** at the top of the page (will display the opposite of whichever game you're already playing)
+>* _PUZZLE GAME:_ user clicks on two tiles to switch their positions until all tiles are in the proper spot & the game is finished
+>* _SLIDER GAME:_ user clicks on one of the tiles touching the blank tile to swtich positions. to win, all tiles should be in their correct position & the blank tile should be in the bottom row at the last spot on the right
 >* on game finish, the entire full photo is revealed as well as the amount of turns it took to complete
 >* **high scores board coming soon**
 
 #### About
 >* learn more information about me and my photos
 >* clicking **me** displays a small blurb about me including links to my virtual resume as well as my github profile
->* clicking **photos** displays a small blurb about my photos including a link to instagram to see more
+>* clicking **photos** displays a small blurb about my photos including my instagram handle to see more
 >* _if you hover over my selfie, it turns me into a radiating eyeball._ move your cursor after to see the reverse effect
 
 #### Browse
