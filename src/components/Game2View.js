@@ -59,7 +59,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onTileClick: (id) => {
-      dispatch(moveTile({id}));
+      dispatch(moveTile(id));
     }
   };
 }

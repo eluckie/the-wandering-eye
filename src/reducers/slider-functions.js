@@ -44,29 +44,23 @@ export function validTileChoice(difficulty, id, tiles) {
   };
 }
 
-// NOT FINDING INDEX CORRECTLY
-
 export function tileIsMovable(difficulty, id, tiles) {
   console.log("id: ", id);
   console.log("tiles: ", tiles);
   const index = tiles.findIndex((tile) => tile === id);
   const row = Math.floor(index / difficulty);
-  let movable = false;
-  console.log("tileIsMovable index, row, movable: ", index, row, movable);
 
   if (row < difficulty - 1) {
     if (tiles[index + difficulty] === 0) {
       console.log("tileIsMovable: check below true");
-      movable = true;
-      // return movable;
+      return true;
     }
   }
 
   if (row > 0) {
     if (tiles[index - difficulty] === 0) {
       console.log("tileIsMovable: check above true");
-      movable = true;
-      // return movable;
+      return true;
     }
   }
 
@@ -74,19 +68,17 @@ export function tileIsMovable(difficulty, id, tiles) {
   if (column < difficulty - 1) {
     if (tiles[index + 1] === 0) {
       console.log("tileIsMovable: check to the right true");
-      movable = true;
-      // return movable;
+      return true;
     }
   }
 
   if (column > 0) {
     if (tiles[index - 1] === 0) {
       console.log("tileIsMovable: check to the left true");
-      movable = true;
-      // return movable;
+      return true;
     }
   }
-  console.log("tileIsMovable: ", movable);
-  return movable;
+  console.log("tileIsMovable: false");
+  return false;
 }
 
