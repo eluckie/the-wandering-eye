@@ -12,12 +12,20 @@ function PhotoInfo() {
     paddingLeft: 0
   }
 
+  const showInstaHandle = () => {
+    document.getElementById("contact-links").innerText = "@yellowpistols on IG";
+  }
+
+  const hideInstaHandle = () => {
+    document.getElementById("contact-links").innerText = "see more photos"
+  }
+
   return (
     <>
       <br/><br/>
       <div style={divStyles}>
         <br/>
-        <a id="contact-links" href="https://www.instagram.com/yellowpistols/?hl=en" target="_blank" rel="noreferrer">see more photos</a>
+        <span id="contact-links" onMouseOver={showInstaHandle} onMouseOut={hideInstaHandle}>see more photos</span>
         <br/><br/>
         <h3>all photos shot by me with an iPhone 12</h3>
         <p>
