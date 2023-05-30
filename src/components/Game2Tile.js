@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import Puzzle1 from "./../img/1.jpg";
-import Puzzle2 from "./../img/2.jpg";
-import Puzzle3 from "./../img/3.jpg";
-import Puzzle4 from "./../img/4.jpg";
-import Puzzle5 from "./../img/5.jpg";
-import Puzzle6 from "./../img/6.jpg";
+import Puzzle1 from "./../img/7.jpg";
+import Puzzle2 from "./../img/8.jpg";
+import Puzzle3 from "./../img/9.jpg";
+import Puzzle4 from "./../img/10.jpg";
+import Puzzle5 from "./../img/11.jpg";
+import Puzzle6 from "./../img/12.jpg";
 
 function Game2Tile(props) {
   const { id, difficulty, tileWidth, isCorrectPos, imageNumber, onClick } = props;
