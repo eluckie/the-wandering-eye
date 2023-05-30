@@ -8,14 +8,16 @@ import Puzzle5 from "./../img/5.jpg";
 import Puzzle6 from "./../img/6.jpg";
 
 function Game2Image(props) {
-  const { difficulty, imageNumber } = props;
-  const puzzleWidth = 600;
+  const { difficulty, imageNumber, moves } = props;
+  const puzzleWidth = 500;
   const tileWidth = puzzleWidth / difficulty;
   const fullImageWidth = difficulty * tileWidth;
-  
+
   let fullImageStyle = {
     maxWidth: `${fullImageWidth}px`,
-    maxHeight: `${fullImageWidth}px`
+    maxHeight: `${fullImageWidth}px`,
+    margin: "auto",
+    display: "block"
   };
 
   let puzzle;
@@ -33,7 +35,7 @@ function Game2Image(props) {
     puzzle = Puzzle6;
   }
 
-  if (!imageNumber) {
+  if (moves < 0) {
     return (
       <>
         <div></div>
@@ -52,12 +54,15 @@ function Game2Image(props) {
 
 Game2Image.propTypes = {
   difficulty: PropTypes.number,
-  imageNumber: PropTypes.number
+  imageNumber: PropTypes.number,
+  moves: PropTypes.number
 };
 
 const mapStateToProps = (state) => {
   return {
-    imageNumber: state.imageNumber
+    imageNumber: state.sliderGamePlay.imageNumber,
+    difficulty: state.sliderGamePlay.difficulty,
+    moves: state.sliderGamePlay.moves
   };
 }
 

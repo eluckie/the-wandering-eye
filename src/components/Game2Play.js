@@ -26,9 +26,8 @@ function Game2Play() {
       <Game2Status/>
       <Game2View/>
       <Game2ImageView/>
-      <br/><br/>
-      <Game2Start
-        onInitGame2={initGame2}/>
+      <br/><br/><br/><br/>
+      <Game2Start/>
       <NavLinks/>
       <Banner/>
     </motion.div>

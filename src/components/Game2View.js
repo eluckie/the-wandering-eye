@@ -16,32 +16,24 @@ function Game2(props) {
     gridTemplateColumns: `repeat(${difficulty}, ${tileWidth}px)`
   }
 
-  if (!tiles) {
-    return (
-      <>
-        <div></div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <div style={tileWrapperStyle}>
-          <div style={tileContainerStyle}>
-            {tiles.map((tile, index) =>
-              <Game2Tile
-                key={index}
-                id={tile}
-                isCorrectPos={tile === (index + 1)}
-                imageNumber={imageNumber}
-                onTileClick={onTileClick}
-                tileWidth={tileWidth}
-                difficulty={difficulty}/>
-            )}
-          </div>
+  return (
+    <>
+      <div style={tileWrapperStyle}>
+        <div style={tileContainerStyle}>
+          {tiles.map((tile, index) =>
+            <Game2Tile
+              key={index}
+              id={tile}
+              isCorrectPos={tile === (index + 1)}
+              imageNumber={imageNumber}
+              onTileClick={onTileClick}
+              tileWidth={tileWidth}
+              difficulty={difficulty}/>
+          )}
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 }
 
 Game2.propTypes = {
@@ -53,9 +45,9 @@ Game2.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    imageNumber: state.imageNumber,
-    tiles: state.tiles,
-    difficulty: state.difficulty
+    imageNumber: state.sliderGamePlay.imageNumber,
+    tiles: state.sliderGamePlay.tiles,
+    difficulty: state.sliderGamePlay.difficulty
   };
 }
 

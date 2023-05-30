@@ -21,7 +21,7 @@ function PhotoInfo() {
         <br/><br/>
         <h3>all photos shot by me with an iPhone 12</h3>
         <p>
-          Among these photos you'll find my daily travels as well as actual intended trips. The locations may vary, but some of the states you'll see are:<br/>
+          Among these photos you'll find my daily travels as well as actual intended trips. The locations may vary, but some of the states you'll see are:</p>
           <ul style={listStyles}>
             <li>California</li>
             <li>Colorado</li>
@@ -34,7 +34,6 @@ function PhotoInfo() {
             <li>New Mexico</li>
             <li>and more!</li>
           </ul>
-        </p>
         <h4>hashtag what filter</h4>
       </div>
     </>

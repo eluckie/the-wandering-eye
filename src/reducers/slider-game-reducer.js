@@ -3,7 +3,7 @@ import * as c from "./../actions/ActionTypes";
 // import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  moves: 0,
+  moves: -1,
   gameComplete: false,
   imageNumber: 0,
   tiles: [],
@@ -14,12 +14,13 @@ const emptyTileId = 0;
 
 function sliderGame(state = initialState, action) {
   switch(action.type) {
-    case c.INIT_GAME: {
+    case c.INIT_GAME2: {
       const difficulty = Math.floor(Math.random() * 3) + 3;
       return Object.assign({}, initialState, {
         difficulty,
         imageNumber: action.imageNumber,
-        tiles: t.generateTileSet(difficulty)
+        tiles: t.generateTileSet(difficulty),
+        moves: 0
       });
     }
     case c.MOVE_TILE: {

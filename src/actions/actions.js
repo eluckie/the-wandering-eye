@@ -28,7 +28,7 @@ export function reverseTiles() {
 
 export function initGame2(imageNumber) {
   return {
-    type: c.INIT_GAME,
+    type: c.INIT_GAME2,
     imageNumber
   };
 }

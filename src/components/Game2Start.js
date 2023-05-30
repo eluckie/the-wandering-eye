@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { initGame2 } from "../actions/actions";
+import { connect } from "react-redux";
 
-function Game2Start(props) {
+function GameStart(props) {
   const { onInitGame2 } = props;
 
   const divStyles = {
@@ -39,8 +41,18 @@ function Game2Start(props) {
   );
 }
 
-Game2Start.propTypes = {
+GameStart.propTypes = {
   onInitGame2: PropTypes.func
 };
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onInitGame2: (imageNumber) => {
+      dispatch(initGame2(imageNumber));
+    }
+  };
+};
+
+const Game2Start = connect(null, mapDispatchToProps)(GameStart);
 
 export default Game2Start;
