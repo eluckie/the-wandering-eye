@@ -24,18 +24,20 @@ function GameStatus(props) {
     return (
       <>
         <h3>1 move</h3>
-        <div className="game-instructions">
+        <br/><br/>
+        {/* <div className="game-instructions">
           <p>click on a touching tile to swap with the blank</p>
-        </div>
+        </div> */}
       </>
     );
   } else {
     return (
       <>
         <h3>{moves} moves</h3>
-        <div className="game-instructions">
+        <br/><br/>
+        {/* <div className="game-instructions">
           <p>click on a touching tile to swap with the blank</p>
-        </div>
+        </div> */}
       </>
     );
   }

@@ -1,4 +1,4 @@
-.game-instructions {
+/* .game-instructions {
   font-style: italic;
   font-size: 1.0em;
   width: 400px;
@@ -6,7 +6,7 @@
   margin: 0 auto;
   overflow-wrap: break-word;
   white-space: pre-wrap;
-}
+} */
 
 .tile-container {
   display: grid;

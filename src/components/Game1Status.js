@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 function GameStatus(props) {
-  const { gameComplete, turnNo, clicksWithinTurn, imageNumber } = props;
+  const { gameComplete, turnNo, imageNumber } = props;
 
   if (gameComplete) {
     return (
@@ -25,7 +25,7 @@ function GameStatus(props) {
       <>
         <br/>
         <h3>turn {turnNo}</h3>
-        <div className="game-instructions">
+        {/* <div className="game-instructions">
           {clicksWithinTurn === 0 && (
             <p>
               click on a tile to select
@@ -36,7 +36,9 @@ function GameStatus(props) {
               click on a tile to swap with this one
             </p>
           )}
-        </div>
+        </div> */}
+        <button>how to</button>
+        <button>high scores</button>
       </>
     );
   }
@@ -45,7 +47,6 @@ function GameStatus(props) {
 GameStatus.propTypes = {
   gameComplete: PropTypes.bool,
   turnNo: PropTypes.number,
-  clicksWithinTurn: PropTypes.number,
   imageNumber: PropTypes.number
 };
 
@@ -53,7 +54,6 @@ const mapStateToProps = (state) => {
   return {
     gameComplete: state.tileGamePlay.gameComplete,
     turnNo: state.tileGamePlay.turnNo,
-    clicksWithinTurn: state.tileGamePlay.clicksWithinTurn,
     imageNumber: state.tileGamePlay.imageNumber
   };
 }

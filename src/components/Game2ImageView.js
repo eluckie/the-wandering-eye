@@ -68,6 +68,8 @@ function Game2Image(props) {
     return (
       <>
         <div className="center">
+          <button>how to</button>
+          <button>high scores</button>
           <img style={imageStyle} src={puzzle} draggable="false" alt="full view"/>
         </div>
       </>
