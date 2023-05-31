@@ -39,12 +39,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function ZinePages() {
-  const buttonText = {
-    fontWeight: "bold",
-    fontSize: 16,
-    color: "black"
-  }
-
   const pageStyles = {
     width: 500,
     height: 500
@@ -61,7 +55,7 @@ function ZinePages() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Banner/>
-      <Link to="/zine/video"><button><span style={buttonText}>video</span></button></Link>
+      <Link to="/zine/video"><button><span className="buttonText">video</span></button></Link>
       <br/><br/>
       <HTMLFlipBook style={bookStyles} width={500} height={500}>
         <div><img style={pageStyles} src={Directions} alt=""/></div>

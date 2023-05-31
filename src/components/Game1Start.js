@@ -6,31 +6,33 @@ import PropTypes from "prop-types";
 function GameStart(props) {
   const { onInitGame1 } = props;
 
-  const divStyles = {
-    textAlign: "center"
-  }
   const colorPalette1Styles = {
     backgroundColor: "#ccffff"
   }
+
   const colorPalette2Styles = {
     backgroundColor: "#ffff66"
   }
+
   const colorPalette3Styles = {
     backgroundColor: "#ff9966"
   }
+
   const colorPalette4Styles = {
     backgroundColor: "#ff00ff"
   }
+
   const colorPalette5Styles = {
     backgroundColor: "#0033cc"
   }
+  
   const colorPalette6Styles = {
     backgroundColor: "#66ff66"
   }
 
   return (
     <>
-      <div style={divStyles}>
+      <div className="center">
         <div id="palette" onClick={() => onInitGame1(1)} style={colorPalette1Styles}></div>
         <div id="palette" onClick={() => onInitGame1(2)} style={colorPalette2Styles}></div>
         <div id="palette" onClick={() => onInitGame1(3)} style={colorPalette3Styles}></div>

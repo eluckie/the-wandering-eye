@@ -5,7 +5,6 @@ import Puzzle3 from "./../img/3.jpg";
 import Puzzle4 from "./../img/4.jpg";
 import Puzzle5 from "./../img/5.jpg";
 import Puzzle6 from "./../img/6.jpg";
-import "./../css/Game1.css";
 
 function Game1Tile(props) {
   const { id, difficulty, tileWidth, selected, correctPos, imageNumber, onTileClick } = props;

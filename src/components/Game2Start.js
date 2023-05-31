@@ -5,32 +5,33 @@ import { connect } from "react-redux";
 function GameStart(props) {
   const { onInitGame2 } = props;
 
-  const divStyles = {
-    textAlign: "center"
-  }
-
   const colorPalette1Styles = {
     backgroundColor: "#9cf9f9"
   }
+
   const colorPalette2Styles = {
     backgroundColor: "#41b5bd"
   }
+
   const colorPalette3Styles = {
     backgroundColor: "#39742a"
   }
+
   const colorPalette4Styles = {
     backgroundColor: "#98b918"
   }
+
   const colorPalette5Styles = {
     backgroundColor: "#f6d83c"
   }
+  
   const colorPalette6Styles = {
     backgroundColor: "#b95418"
   }
 
   return (
     <>
-      <div style={divStyles}>
+      <div className="center">
         
         <div id="palette" onClick={() => onInitGame2(1)} style={colorPalette1Styles}></div>
         <div id="palette" onClick={() => onInitGame2(2)} style={colorPalette2Styles}></div>

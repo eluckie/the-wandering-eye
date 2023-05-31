@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './../src/css/index.css';
+import './../src/css/Game.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-// import tileGameReducer from "./reducers/tile-game-reducer";
-// import sliderGameReducer from "./reducers/slider-game-reducer";
 import rootReducer from "./reducers/index";
 import { Provider } from 'react-redux';
 import { legacy_createStore as createStore, applyMiddleware, compose } from 'redux';

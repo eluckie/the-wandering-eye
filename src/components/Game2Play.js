@@ -12,12 +12,6 @@ import Game2View from "./Game2View";
 function GamePlay(props) {
   const { gameComplete } = props;
 
-  const buttonText = {
-    fontWeight: "bold",
-    fontSize: 16,
-    color: "black"
-  }
-
   const divStyles = {
     display: "grid",
     gridTemplateColumns: "1fr 2fr",
@@ -51,7 +45,7 @@ function GamePlay(props) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Banner/>
-      <Link to="/play/puzzle"><button><span style={buttonText}>play puzzle</span></button></Link>
+      <Link to="/play/puzzle"><button><span className="buttonText">play puzzle</span></button></Link>
       <br/>
       <Game2Status/>
       {gameDisplay}

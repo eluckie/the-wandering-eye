@@ -7,13 +7,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 function AboutControl() {
-  const buttonText = {
-    fontWeight: "bold",
-    fontSize: 16,
-    textAlign: "center",
-    color: "black"
-  }
-
   const [showMyInfo, setShowMyInfo] = useState(false);
   const [showPhotoInfo, setShowPhotoInfo] = useState(false);
   const [ready, setReady] = useState(true);
@@ -41,7 +34,7 @@ function AboutControl() {
         animate={{opacity: 1}}
         exit={{opacity: 0}}>
         <Banner/>
-        <button onClick={showPhotos}><span style={buttonText}>photos</span></button>
+        <button onClick={showPhotos}><span className="buttonText">photos</span></button>
         <MyInfo/>
         <AboutPhoto/>
         <NavLinks/>
@@ -55,7 +48,7 @@ function AboutControl() {
         animate={{opacity: 1}}
         exit={{opacity: 0}}>
         <Banner/>
-        <button onClick={showMe}><span style={buttonText}>me</span></button>
+        <button onClick={showMe}><span className="buttonText">me</span></button>
         <PhotoInfo/>
         <AboutPhoto/>
         <NavLinks/>
@@ -69,8 +62,8 @@ function AboutControl() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}>
         <Banner/>
-        <button onClick={showMe}><span style={buttonText}>me</span></button>
-        <button onClick={showPhotos}><span style={buttonText}>photos</span></button>
+        <button onClick={showMe}><span className="buttonText">me</span></button>
+        <button onClick={showPhotos}><span className="buttonText">photos</span></button>
         <br/><br/>
         <AboutPhoto/>
         <NavLinks/>

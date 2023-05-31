@@ -27,10 +27,6 @@ function Game2Image(props) {
     border: "none"
   };
 
-  let divStyles = {
-    textAlign: "center"
-  }
-
   let puzzle;
   let fullView;
 
@@ -63,7 +59,7 @@ function Game2Image(props) {
   } else if (gameComplete) {
     return (
       <>
-        <div style={divStyles}>
+        <div className="center">
           <img style={fullImageStyle} src={fullView} draggable="false" alt="full view"/>
         </div>
       </>
@@ -71,7 +67,7 @@ function Game2Image(props) {
   } else {
     return (
       <>
-        <div style={divStyles}>
+        <div className="center">
           <img style={imageStyle} src={puzzle} draggable="false" alt="full view"/>
         </div>
       </>

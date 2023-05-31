@@ -52,7 +52,7 @@ This webpage acts as an interactive photo portfolio for my personal landscape ph
 >* the game will randomize difficulty between 3x3, 4x4, 5x5, or 6x6
 >* to start a new game, click on a new color on the color palette. to choose a different randomized difficulty, click on the same color again. to play the other game, click the **play puzzle** or **play slider** at the top of the page (will display the opposite of whichever game you're already playing)
 >* _PUZZLE GAME:_ user clicks on two tiles to switch their positions until all tiles are in the proper spot & the game is finished
->* _SLIDER GAME:_ user clicks on one of the tiles touching the blank tile to swtich positions. to win, all tiles should be in their correct position & the blank tile should be in the bottom row at the last spot on the right
+>* _SLIDER GAME:_ user clicks on one of the tiles touching the blank tile to switch positions. to win, all tiles should be in their correct position & the blank tile should be in the bottom row at the last spot on the right
 >* on game finish, the entire full photo is revealed as well as the amount of turns it took to complete
 >* **high scores board coming soon**
 
@@ -94,10 +94,10 @@ _when in the correct position, tile has inner border_\
 ![screenshot of zine selection page showing clickable zine](./src/img/pages.png)
 
 
-## About
+<!-- ## About
 #### the wandering eye feature
 
-https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5-93d0-462a81ad553f
+https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5-93d0-462a81ad553f -->
 
 
 ## Diagrams
@@ -118,10 +118,9 @@ https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5
 
 
 ## Stretch Plans
-* create webapi to browse photos (NoSQL)
-* add sliding puzzle game
 * add high scores board for games
-* user upload to create custom sliding puzzles on demand
+* create webapi to browse photos (NoSQL)
+* user upload to create custom sliding puzzles on demand?
 * custom domain
 <!-- * EASTER EGG - hidden onClick that does annoying little window.alert popup -->
 

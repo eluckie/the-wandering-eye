@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function ZineVideo() {
-  const buttonText = {
-    fontWeight: "bold",
-    fontSize: 16,
-    color: "black"
-  }
-
   const videoStyles = {
     position: "relative",
     width: "600px",
@@ -44,7 +38,7 @@ function ZineVideo() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}>
       <Banner/>
-      <Link to="/zine/pages"><button><span style={buttonText}>pages</span></button></Link>
+      <Link to="/zine/pages"><button><span className="buttonText">pages</span></button></Link>
       <br/><br/>
       <div style={videoStyles}>
         <iframe title="wanderingEye" style={iFrameStyles}
