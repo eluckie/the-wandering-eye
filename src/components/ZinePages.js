@@ -59,39 +59,39 @@ function ZinePages() {
       <br/><br/>
       <HTMLFlipBook style={bookStyles} width={500} height={500}>
         <div><img style={pageStyles} src={Directions} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Cover} alt="the wandering eye zine cover"/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page2} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Contents} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Blank} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page3} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page4} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page5} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page6} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page7} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page8} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page9} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page10} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page11} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page12} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page13} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page14} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page15} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page16} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page17} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page18} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page19} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page20} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page21} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page22} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page23} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page24} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page25} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page26} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page27} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page28} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page29} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Page30} alt=""/></div>
-        <div className="zinePage"><img style={pageStyles} src={Thanks} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Cover} alt="the wandering eye zine cover"/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page2} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Contents} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Blank} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page3} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page4} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page5} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page6} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page7} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page8} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page9} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page10} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page11} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page12} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page13} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page14} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page15} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page16} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page17} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page18} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page19} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page20} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page21} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page22} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page23} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page24} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page25} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page26} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page27} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page28} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page29} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Page30} alt=""/></div>
+        <div id="zinePage"><img style={pageStyles} src={Thanks} alt=""/></div>
       </HTMLFlipBook>
       <NavLinks/>
       <Banner/>

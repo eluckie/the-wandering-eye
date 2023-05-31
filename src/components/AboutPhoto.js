@@ -26,7 +26,7 @@ function AboutPhoto() {
       <div id="eye-div" style={eyeShapeStyles}>
           <br/><br/><br/><br/><br/><br/><br/>
           <div style={aboutDivStyles}>
-            <img id="hover" style={selfieStyles} src={Selfie} alt="selfie"/>
+            <img className="hover" style={selfieStyles} src={Selfie} alt="selfie"/>
           </div>
       </div>
     </>

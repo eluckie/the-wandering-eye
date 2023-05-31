@@ -46,8 +46,8 @@ a {
   text-align: center;
 }
 
-.zinePage {
-  border: 4px solid lightgray;
+.accent {
+  color:goldenrod;
 }
 
 .buttonText {
@@ -57,12 +57,12 @@ a {
   color: black;
 }
 
-#accent {
-  color:goldenrod;
+.hover:hover {
+  transform: scale(1.1);
 }
 
-#hover:hover {
-  transform: scale(1.1);
+#zinePage {
+  border: 4px solid lightgray;
 }
 
 #page-links:hover {

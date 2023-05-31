@@ -20,7 +20,7 @@ function Home() {
         rotate: [0, 0, 360, 300, 0]
       }}>
       <div className="center">
-        <Link to="/browse"><img id="hover" style={photoStyles} src={Logo} alt=""/></Link>
+        <Link to="/browse"><img className="hover" style={photoStyles} src={Logo} alt=""/></Link>
       </div>
       <NavLinks/>
     </motion.div>
