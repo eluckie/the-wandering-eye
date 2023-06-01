@@ -37,32 +37,39 @@ function Game2Image(props) {
 
   let puzzle;
   let fullView;
+  let altText;
 
   if (imageNumber === 1) {
     puzzle = Puzzle1;
     fullView = Full1;
+    altText = "view from a cliff-top overlooking the waves washing up along a rocky beach and a giant rock in the water shaped as a shark's fin. Rocks and clifftop lined with green plants";
   } else if (imageNumber === 2) {
     puzzle = Puzzle2;
     fullView = Full2;
+    altText = "view from between dark green and weather-stripped trees of snow-capped mountains against bright blue sky. a peek at the Rocky Mountains";
   } else if (imageNumber === 3) {
     puzzle = Puzzle3;
     fullView = Full3;
+    altText = "view looking upward from inside of a lush green canyon in the forest. rocky walls lining the side and lush green forest and trees peeking out from the top";
   } else if (imageNumber === 4) {
     puzzle = Puzzle4;
     fullView = Full4;
+    altText = "view of a small, calm creek surrounded by fluffy yellow-green bushes along either side and lined with trees further back. beautful blue sky with about half-full fluffy white clouds";
   } else if (imageNumber === 5) {
     puzzle = Puzzle5;
     fullView = Full5;
+    altText = "view of 2 small trees in the middle of a small lake from between colorful big bushes and fluffy trees. many shades of yellows, greens, and reds in the bushes and mostly yellow with some shades of green in the trees";
   } else {
     puzzle = Puzzle6;
     fullView = Full6;
+    altText = "nearly head-on view of San Francisco's Golden Gate Bridge. with the ocean to the left and hills to the right of the bridge, it also shows the structure and road passing through underneath the bridge";
   }
 
   if (gameComplete) {
     return (
       <>
         <div className="center">
-          <img style={fullImageStyle} src={fullView} draggable="false" alt="full view"/>
+          <img style={fullImageStyle} src={fullView} draggable="false" alt={altText}/>
         </div>
       </>
     );
@@ -78,7 +85,7 @@ function Game2Image(props) {
           <HighScores
             open={openHighScores}
             onClose={() => setOpenHighScores(false)}/>
-          <img style={imageStyle} src={puzzle} draggable="false" alt="full view"/>
+          <img style={imageStyle} src={puzzle} draggable="false" alt={altText}/>
         </div>
       </>
     );

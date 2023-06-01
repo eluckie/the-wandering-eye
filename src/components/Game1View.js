@@ -28,27 +28,27 @@ function Game1(props) {
   if (gameComplete) {
     if (imageNumber === 1) {
       return (
-        <img src={Puzzle1} alt=""/>
+        <img src={Puzzle1} alt="view of Denver skyline visible through bushes along the bottom of the frame with the city mirror-reflected in a lake"/>
       );
     } else if (imageNumber === 2) {
       return (
-        <img src={Puzzle2} alt=""/>
+        <img src={Puzzle2} alt="view of many different types of trees. different shades of yellows and greens with a hint of orange"/>
       );
     } else if (imageNumber === 3) {
       return (
-        <img src={Puzzle3} alt=""/>
+        <img src={Puzzle3} alt="view of an orange-tinted sky behind a mountain backdrop. overlooking an expansive field with lots of plants and dirt. everything has an orange glow from the sunset"/>
       );
     } else if (imageNumber === 4) {
       return (
-        <img src={Puzzle4} alt=""/>
+        <img src={Puzzle4} alt="view of a cotton candy purple, pink, and blue sky above a few trees and field of yellow flowers. rolling hills peeking out of the background"/>
       );
     } else if (imageNumber === 5) {
       return (
-        <img src={Puzzle5} alt=""/>
+        <img src={Puzzle5} alt="view of an intesely-colored sunset over the rolling waves of the ocean. the water and edges of the sky are a deep dark blue with a splash of pink, light blue, orange, and yellow across the center of the sky from the sunset"/>
       );
     } else {
       return (
-        <img src={Puzzle6} alt=""/>
+        <img src={Puzzle6} alt="bright green lizard perched on a (different shade) of bright green leaves. surrounded by lush, bright green differently-shaped leaves and plants"/>
       );
     }
   } else if (!tiles) {
