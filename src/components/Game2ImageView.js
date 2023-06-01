@@ -12,13 +12,15 @@ import Full3 from "./../img/nine.jpg";
 import Full4 from "./../img/ten.jpg";
 import Full5 from "./../img/eleven.jpg";
 import Full6 from "./../img/twelve.jpg";
-import Instructions from "./Instructions";
+import Instructions from "./SliderInstructions";
+import HighScores from "./SliderHighScores";
 import { useState } from "react";
 
 function Game2Image(props) {
   const { imageNumber, gameComplete } = props;
 
   const [openInstructions, setOpenInstructions] = useState(false);
+  const [openHighScores, setOpenHighScores] = useState(false);
 
   const imageStyle = {
     height: 260,
@@ -69,10 +71,13 @@ function Game2Image(props) {
       <>
         <div className="center">
           <button onClick={() => setOpenInstructions(true)}>how to</button>
-          <button>high scores</button>
+          <button onClick={() => setOpenHighScores(true)}>high scores</button>
           <Instructions
             open={openInstructions}
             onClose={() => setOpenInstructions(false)}/>
+          <HighScores
+            open={openHighScores}
+            onClose={() => setOpenHighScores(false)}/>
           <img style={imageStyle} src={puzzle} draggable="false" alt="full view"/>
         </div>
       </>

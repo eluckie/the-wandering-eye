@@ -23,8 +23,9 @@
   outline-offset: -6px;
 }
 
-.instructions-container {
+.modal-container {
   max-width: 600px;
+  height: 400px;
   width: 100%;
   position: fixed;
   top: 40%;
@@ -36,9 +37,9 @@
   border-radius: 0.7rem;
 }
 
-.instructions {
+.modal-content {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem 2rem;
 }
@@ -49,4 +50,17 @@
 
 .hidden {
   display: none;
+}
+
+.closeBtn {
+  position: fixed;
+  top: 2px;
+  right: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+  transform: scale(1.5);
+  font-weight: bold;
 }

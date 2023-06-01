@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Instructions from "./Instructions";
+import Instructions from "./SliderInstructions";
+import HighScores from "./SliderHighScores";
+import { useState } from "react";
 
 function GameStatus(props) {
   const { gameComplete, moves, imageNumber } = props;
+
+  const [openInstructions, setOpenInstructions] = useState(false);
+  const [openHighScores, setOpenHighScores] = useState(false);
 
   if (gameComplete) {
     return (
@@ -17,9 +22,14 @@ function GameStatus(props) {
   } else if (!imageNumber) {
     return (
       <>
-        <button>how to</button>
-        <button>high scores</button>
-        <Instructions/>
+        <button onClick={() => setOpenInstructions(true)}>how to</button>
+        <button onClick={() => setOpenHighScores(true)}>high scores</button>
+        <Instructions
+          open={openInstructions}
+          onClose={() => setOpenInstructions(false)}/>
+        <HighScores
+          open={openHighScores}
+          onClose={() => setOpenHighScores(false)}/>
       </>
     )
   } else if (moves === 1) {
@@ -27,9 +37,6 @@ function GameStatus(props) {
       <>
         <h3>1 move</h3>
         <br/><br/>
-        {/* <div className="game-instructions">
-          <p>click on a touching tile to swap with the blank</p>
-        </div> */}
       </>
     );
   } else {
@@ -37,9 +44,6 @@ function GameStatus(props) {
       <>
         <h3>{moves} moves</h3>
         <br/><br/>
-        {/* <div className="game-instructions">
-          <p>click on a touching tile to swap with the blank</p>
-        </div> */}
       </>
     );
   }
