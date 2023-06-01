@@ -18,6 +18,15 @@ function PuzzleInstructions(props) {
     cursor: "pointer"
   }
 
+  const tinyRedFont = {
+    color: "red",
+    fontSize: 12
+  }
+
+  const tinyFont = {
+    fontSize: 12
+  }
+
   const [step1Visible, setStep1Visible] = useState(true);
   const [step2Visible, setStep2Visible] = useState(false);
   const [step3Visible, setStep3Visible] = useState(false);
@@ -103,22 +112,20 @@ function PuzzleInstructions(props) {
                 3x3<br/>
                 4x4<br/>
                 5x5<br/>
-                <span style={{fontSize: 12}}>or</span><br/>
+                <span style={tinyFont}>or</span><br/>
                 6x6.
               </p>
-              <br/><br/>
               <p className="hover" onClick={showStep2} style={nextButton}>next</p>
             </div>
             <div id="step2" className="hidden">
               <h2>puzzle swap instructions</h2>
               <br/><br/>
-              <p style={{color: "red", fontSize: 12}}>
-                if you want a different size, just click the color palette<br/>
-                again to re-randomize the difficulty
+              <p style={tinyRedFont}>
+                if you want a different size, click the color palette<br/>
+                again to re-randomize the difficulty.
               </p>
               <br/>
               <p>click on any 2 tiles to swap their places.</p>
-              <br/>
               <span>
                 <p className="hover" onClick={showStep1} style={prevButton}>previous</p>
                 <p className="hover" onClick={showStep3} style={nextButton}>next</p>
@@ -135,7 +142,6 @@ function PuzzleInstructions(props) {
                 continue swapping tiles until all the<br/>
                 pieces are in the correct position.
               </p>
-              <br/>
               <p className="hover" onClick={showStep2} style={prevButton}>previous</p>
               <p className="hover" onClick={showStep4} style={nextButton}>next</p>
             </div>
@@ -146,8 +152,7 @@ function PuzzleInstructions(props) {
               <h3>you won!</h3>
               <p>if you get a high score, you will be able to enter your name.*</p>
               <br/>
-              <p style={{color: "red", fontSize: 12}}>*scoreboard coming soon</p>
-              <br/>
+              <p style={tinyRedFont}>*scoreboard coming soon.</p>
               <p className="hover" onClick={showStep3} style={prevButton}>previous</p>
             </div>
           </div>

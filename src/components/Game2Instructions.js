@@ -18,6 +18,15 @@ function SliderInstructions(props) {
     cursor: "pointer"
   }
 
+  const tinyRedFont = {
+    color: "red",
+    fontSize: 12
+  }
+
+  const tinyFont = {
+    fontSize: 12
+  }
+
   const [step1Visible, setStep1Visible] = useState(true);
   const [step2Visible, setStep2Visible] = useState(false);
   const [step3Visible, setStep3Visible] = useState(false);
@@ -102,11 +111,13 @@ function SliderInstructions(props) {
               <p>
                 3x3<br/>
                 4x4<br/>
-                5x5<br/>
-                <span style={{fontSize: 12}}>or</span><br/>
-                6x6.
+                <span style={tinyFont}>or</span><br/>
+                5x5.
               </p>
-              <br/><br/>
+              <p style={tinyRedFont}>
+                if you want a different size, click the color palette<br/>
+                again to re-randomize the difficulty.
+              </p>
               <p className="hover" onClick={showStep2} style={nextButton}>next</p>
             </div>
             <div id="step2" className="hidden">
@@ -120,10 +131,10 @@ function SliderInstructions(props) {
                 left<br/>
                 right<br/>
                 top<br/>
-                or bottom
+                <span style={tinyFont}>or</span><br/>
+                bottom
               </p>
               <p>that's touching the blank tile to swap their places.</p>
-              <br/><br/>
               <span>
                 <p className="hover" onClick={showStep1} style={prevButton}>previous</p>
                 <p className="hover" onClick={showStep3} style={nextButton}>next</p>
@@ -138,9 +149,10 @@ function SliderInstructions(props) {
               </p>
               <p>
                 continue swapping tiles until they<br/>
-                are all in the correct position.
+                are all in the correct position.*
               </p>
               <br/>
+              <p style={tinyRedFont}>*the correct position for the blank tile is<br/><em>always</em> the bottom row, right corner.</p>
               <p className="hover" onClick={showStep2} style={prevButton}>previous</p>
               <p className="hover" onClick={showStep4} style={nextButton}>next</p>
             </div>
@@ -151,8 +163,7 @@ function SliderInstructions(props) {
               <h3>you won!</h3>
               <p>if you get a high score, you will be able to enter your name.*</p>
               <br/>
-              <p style={{color: "red", fontSize: 12}}>*scoreboard coming soon</p>
-              <br/>
+              <p style={tinyRedFont}>*scoreboard coming soon.</p>
               <p className="hover" onClick={showStep3} style={prevButton}>previous</p>
             </div>
           </div>
