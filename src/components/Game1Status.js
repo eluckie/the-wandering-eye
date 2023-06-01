@@ -22,8 +22,14 @@ function GameStatus(props) {
   } else if (!imageNumber) {
     return (
       <>
-        <br/>
-        <h3>choose your color</h3>
+        <button onClick={() => setOpenInstructions(true)}>how to</button>
+        <button onClick={() => setOpenHighScores(true)}>high scores</button>
+        <Instructions
+          open={openInstructions}
+          onClose={() => setOpenInstructions(false)}/>
+        <HighScores
+          open={openHighScores}
+          onClose={() => setOpenHighScores(false)}/>
       </>
     )
   } else {
