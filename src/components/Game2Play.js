@@ -30,12 +30,12 @@ function GamePlay(props) {
     gameDisplay = 
       <>
         <div style={fullDiv}>
-        <h3>choose your color</h3>
-      </div>
-      <br/><br/><br/>
-      <Game2Start/>
-      <br/><br/><br/><br/>
-      <Game2Status/>
+          <h3>choose your color</h3>
+        </div>
+        <br/><br/><br/>
+        <Game2Start/>
+        <br/><br/><br/><br/>
+        <Game2Status/>
       </>
   } else if (!gameComplete) {
     gameDisplay =
@@ -43,10 +43,10 @@ function GamePlay(props) {
         <Game2Status/>
         <div style={divStyles}>
           <Game2ImageView/>
-        <Game2View/>
-      </div>
-      <br/><br/><br/>
-      <Game2Start/>
+          <Game2View/>
+        </div>
+        <br/><br/><br/>
+        <Game2Start/>
       </>
   } else {
     gameDisplay =

@@ -21,6 +21,7 @@ function SliderInstructions(props) {
   const [step1Visible, setStep1Visible] = useState(true);
   const [step2Visible, setStep2Visible] = useState(false);
   const [step3Visible, setStep3Visible] = useState(false);
+  const [step4Visible, setStep4Visible] = useState(false);
 
   const showStep1 = () => {
     const step1 = document.getElementById("step1");
@@ -28,6 +29,7 @@ function SliderInstructions(props) {
     setStep1Visible(!step1Visible);
     hideStep2();
     hideStep3();
+    hideStep4();
   }
 
   const hideStep1 = () => {
@@ -42,6 +44,7 @@ function SliderInstructions(props) {
     setStep2Visible(!step2Visible);
     hideStep1();
     hideStep3();
+    hideStep4();
   }
 
   const hideStep2 = () => {
@@ -56,12 +59,28 @@ function SliderInstructions(props) {
     setStep3Visible(!step3Visible);
     hideStep1();
     hideStep2();
+    hideStep4();
   }
 
   const hideStep3 = () => {
     const step3 = document.getElementById("step3");
     step3.setAttribute("class", "hidden");
     setStep3Visible(!step3Visible);
+  }
+
+  const showStep4 = () => {
+    const step4 = document.getElementById("step4");
+    step4.removeAttribute("class");
+    setStep4Visible(!step4Visible);
+    hideStep1();
+    hideStep2();
+    hideStep3();
+  }
+
+  const hideStep4 = () => {
+    const step4 = document.getElementById("step4");
+    step4.setAttribute("class", "hidden");
+    setStep4Visible(!step4Visible);
   }
 
   if (!open) {
@@ -76,6 +95,24 @@ function SliderInstructions(props) {
               <h2>slider puzzle instructions</h2>
               <br/>
               <p>
+                click a color on the color palette to begin a game.<br/>
+                difficulty is randomized upon game start.
+              </p>
+              <p>puzzle difficulty can be</p>
+              <p>
+                3x3<br/>
+                4x4<br/>
+                5x5<br/>
+                <span style={{fontSize: 12}}>or</span><br/>
+                6x6.
+              </p>
+              <br/><br/>
+              <p className="hover" onClick={showStep2} style={nextButton}>next</p>
+            </div>
+            <div id="step2" className="hidden">
+              <h2>slider puzzle instructions</h2>
+              <br/>
+              <p>
                 locate the blank tile.<br/>
                 click a tile to the
               </p>
@@ -87,9 +124,12 @@ function SliderInstructions(props) {
               </p>
               <p>that's touching the blank tile to swap their places.</p>
               <br/><br/>
-              <p className="hover" onClick={showStep2} style={nextButton}>next</p>
+              <span>
+                <p className="hover" onClick={showStep1} style={prevButton}>previous</p>
+                <p className="hover" onClick={showStep3} style={nextButton}>next</p>
+              </span>
             </div>
-            <div id="step2" className="hidden">
+            <div id="step3" className="hidden">
               <h2>slider puzzle instructions</h2>
               <br/>
               <p>
@@ -101,12 +141,10 @@ function SliderInstructions(props) {
                 are all in the correct position.
               </p>
               <br/>
-              <span>
-                <p className="hover" onClick={showStep1} style={prevButton}>previous</p>
-                <p className="hover" onClick={showStep3} style={nextButton}>next</p>
-              </span>
+              <p className="hover" onClick={showStep2} style={prevButton}>previous</p>
+              <p className="hover" onClick={showStep4} style={nextButton}>next</p>
             </div>
-            <div id="step3" className="hidden">
+            <div id="step4" className="hidden">
               <h2>slider puzzle instructions</h2>
               <br/>
               <p>once all tiles are in the correct position,</p>
@@ -115,7 +153,7 @@ function SliderInstructions(props) {
               <br/>
               <p style={{color: "red", fontSize: 12}}>*scoreboard coming soon</p>
               <br/>
-              <p className="hover" onClick={showStep2} style={prevButton}>previous</p>
+              <p className="hover" onClick={showStep3} style={prevButton}>previous</p>
             </div>
           </div>
         </div>

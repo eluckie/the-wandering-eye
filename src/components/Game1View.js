@@ -52,11 +52,7 @@ function Game1(props) {
       );
     }
   } else if (!tiles) {
-    return (
-      <>
-        <div></div>
-      </>
-    );
+    return null;
   } else {
     return (
       <>
