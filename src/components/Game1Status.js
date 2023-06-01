@@ -1,8 +1,14 @@
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Instructions from "./Game1Instructions";
+import HighScores from "./Game1HighScores";
+import { useState } from "react";
 
 function GameStatus(props) {
   const { gameComplete, turnNo, imageNumber } = props;
+
+  const [openInstructions, setOpenInstructions] = useState(false);
+  const [openHighScores, setOpenHighScores] = useState(false);
 
   if (gameComplete) {
     return (
@@ -25,20 +31,14 @@ function GameStatus(props) {
       <>
         <br/>
         <h3>turn {turnNo}</h3>
-        {/* <div className="game-instructions">
-          {clicksWithinTurn === 0 && (
-            <p>
-              click on a tile to select
-            </p>
-          )}
-          {clicksWithinTurn === 1 && (
-            <p>
-              click on a tile to swap with this one
-            </p>
-          )}
-        </div> */}
-        <button>how to</button>
-        <button>high scores</button>
+        <button onClick={() => setOpenInstructions(true)}>how to</button>
+        <button onClick={() => setOpenHighScores(true)}>high scores</button>
+        <Instructions
+            open={openInstructions}
+            onClose={() => setOpenInstructions(false)}/>
+          <HighScores
+            open={openHighScores}
+            onClose={() => setOpenHighScores(false)}/>
       </>
     );
   }

@@ -60,7 +60,7 @@ function Game1(props) {
   } else {
     return (
       <>
-        <div className="tile-wrapper" style={tileWrapperStyle}>
+        <div className="tile-wrapper zIndex" style={tileWrapperStyle}>
           <div className="tile-container" style={tileContainerStyle}>
             {tiles.map((tile, index) => (
               <Game1Tile

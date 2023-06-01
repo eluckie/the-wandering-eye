@@ -93,12 +93,12 @@ function SliderInstructions(props) {
               <h2>slider puzzle instructions</h2>
               <br/>
               <p>
-                pieces will have a faint white dotted outline to<br/>
+                tiles will have a faint white dotted outline to<br/>
                 indicate when they're in the correct position.
               </p>
               <p>
-                continue swapping tiles until all the<br/>
-                pieces are in the correct position.
+                continue swapping tiles until they<br/>
+                are all in the correct position.
               </p>
               <br/>
               <span>

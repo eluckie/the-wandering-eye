@@ -12,8 +12,8 @@ import Full3 from "./../img/nine.jpg";
 import Full4 from "./../img/ten.jpg";
 import Full5 from "./../img/eleven.jpg";
 import Full6 from "./../img/twelve.jpg";
-import Instructions from "./SliderInstructions";
-import HighScores from "./SliderHighScores";
+import Instructions from "./Game2Instructions";
+import HighScores from "./Game2HighScores";
 import { useState } from "react";
 
 function Game2Image(props) {

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Instructions from "./SliderInstructions";
-import HighScores from "./SliderHighScores";
+import Instructions from "./Game2Instructions";
+import HighScores from "./Game2HighScores";
 import { useState } from "react";
 
 function GameStatus(props) {
