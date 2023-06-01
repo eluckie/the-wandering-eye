@@ -10,7 +10,7 @@ import Game2Status from "./Game2Status";
 import Game2View from "./Game2View";
 
 function GamePlay(props) {
-  const { gameComplete } = props;
+  const { gameComplete, moves } = props;
 
   const divStyles = {
     display: "grid",
@@ -19,38 +19,57 @@ function GamePlay(props) {
     placeItems: "center"
   }
 
-  const gameWonDiv = {
+  const fullDiv = {
     display: "block",
     margin: "auto"
   }
 
   let gameDisplay;
 
-  if (!gameComplete) {
+  if (moves < 0) {
+    gameDisplay = 
+      <>
+        <div style={fullDiv}>
+        <h3>choose your color</h3>
+      </div>
+      <br/><br/><br/>
+      <Game2Start/>
+      <br/><br/><br/><br/>
+      <Game2Status/>
+      </>
+  } else if (!gameComplete) {
     gameDisplay =
-      <div style={divStyles}>
-        <Game2ImageView/>
+      <>
+        <Game2Status/>
+        <div style={divStyles}>
+          <Game2ImageView/>
         <Game2View/>
       </div>
+      <br/><br/><br/>
+      <Game2Start/>
+      </>
   } else {
     gameDisplay =
-      <div style={gameWonDiv}>
-        <Game2ImageView/>
-      </div>
+      <>
+        <Game2Status/>
+        <div style={fullDiv}>
+          <Game2ImageView/>
+        </div>
+        <br/><br/><br/>
+        <Game2Start/>
+      </>
   }
 
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}>
+      transition={{ duration: 0.5 }}
+      className="overlay">
       <Banner/>
       <Link to="/play/puzzle"><button><span className="buttonText">play puzzle</span></button></Link>
       <br/>
-      <Game2Status/>
       {gameDisplay}
-      <br/><br/><br/>
-      <Game2Start/>
       <NavLinks/>
       <Banner/>
     </motion.div>
@@ -58,12 +77,14 @@ function GamePlay(props) {
 }
 
 GamePlay.propTypes = {
-  gameComplete: PropTypes.bool
+  gameComplete: PropTypes.bool,
+  moves: PropTypes.number
 };
 
 const mapStateToProps = (state) => {
   return {
-    gameComplete: state.sliderGamePlay.gameComplete
+    gameComplete: state.sliderGamePlay.gameComplete,
+    moves: state.sliderGamePlay.moves
   };
 }
 

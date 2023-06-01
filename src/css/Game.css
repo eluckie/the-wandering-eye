@@ -1,13 +1,3 @@
-/* .game-instructions {
-  font-style: italic;
-  font-size: 1.0em;
-  width: 400px;
-  height: 50px;
-  margin: 0 auto;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-} */
-
 .tile-container {
   display: grid;
   grid-gap: 0px;
@@ -33,6 +23,30 @@
   outline-offset: -6px;
 }
 
-/* @media only screen and (max-width: 400px) {
+.instructions-container {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 0.7rem;
+}
 
-} */
+.instructions {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+}
+
+.zIndex {
+  z-index: -1;
+}
+
+.hidden {
+  display: none;
+}

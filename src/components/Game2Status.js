@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Instructions from "./Instructions";
 
 function GameStatus(props) {
   const { gameComplete, moves, imageNumber } = props;
@@ -16,8 +17,9 @@ function GameStatus(props) {
   } else if (!imageNumber) {
     return (
       <>
-        <br/>
-        <h3>choose your color</h3>
+        <button>how to</button>
+        <button>high scores</button>
+        <Instructions/>
       </>
     )
   } else if (moves === 1) {

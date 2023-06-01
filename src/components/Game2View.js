@@ -19,7 +19,7 @@ function Game2(props) {
   if (!gameComplete) {
     return (
       <>
-      <div className="gamePlay">
+      <div className="gamePlay zIndex">
         <div className="tile-wrapper" style={tileWrapperStyle}>
           <div className="tile-container" style={tileContainerStyle}>
             {tiles.map((tile, index) =>

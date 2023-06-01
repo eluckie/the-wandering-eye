@@ -12,20 +12,26 @@ import Full3 from "./../img/nine.jpg";
 import Full4 from "./../img/ten.jpg";
 import Full5 from "./../img/eleven.jpg";
 import Full6 from "./../img/twelve.jpg";
+import Instructions from "./Instructions";
+import { useState } from "react";
 
 function Game2Image(props) {
-  const { imageNumber, moves, gameComplete } = props;
+  const { imageNumber, gameComplete } = props;
+
+  const [openInstructions, setOpenInstructions] = useState(false);
 
   const imageStyle = {
     height: 260,
     margin: 40,
-    border: "2px solid grey"
-  };
+    border: "2px solid grey",
+    borderRadius: "0.7rem"
+  }
 
   const fullImageStyle = {
     height: "100%",
-    border: "none"
-  };
+    border: "none",
+    borderRadius: "0.7rem"
+  }
 
   let puzzle;
   let fullView;
@@ -50,13 +56,7 @@ function Game2Image(props) {
     fullView = Full6;
   }
 
-  if (moves < 0) {
-    return (
-      <>
-        <div></div>
-      </>
-    );
-  } else if (gameComplete) {
+  if (gameComplete) {
     return (
       <>
         <div className="center">
@@ -68,8 +68,11 @@ function Game2Image(props) {
     return (
       <>
         <div className="center">
-          <button>how to</button>
+          <button onClick={() => setOpenInstructions(true)}>how to</button>
           <button>high scores</button>
+          <Instructions
+            open={openInstructions}
+            onClose={() => setOpenInstructions(false)}/>
           <img style={imageStyle} src={puzzle} draggable="false" alt="full view"/>
         </div>
       </>
@@ -78,17 +81,13 @@ function Game2Image(props) {
 }
 
 Game2Image.propTypes = {
-  difficulty: PropTypes.number,
   imageNumber: PropTypes.number,
-  moves: PropTypes.number,
   gameComplete: PropTypes.bool
 };
 
 const mapStateToProps = (state) => {
   return {
     imageNumber: state.sliderGamePlay.imageNumber,
-    difficulty: state.sliderGamePlay.difficulty,
-    moves: state.sliderGamePlay.moves,
     gameComplete: state.sliderGamePlay.gameComplete
   };
 }
