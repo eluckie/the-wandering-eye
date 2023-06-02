@@ -23,12 +23,20 @@
   outline-offset: -6px;
 }
 
+.instructions {
+  height: 400px;
+  top: 40%;
+}
+
+.highscores {
+  height: 580px;
+  top: 45%;
+}
+
 .modal-container {
   max-width: 600px;
-  height: 400px;
   width: 100%;
   position: fixed;
-  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

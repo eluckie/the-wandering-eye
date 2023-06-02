@@ -8,7 +8,7 @@ function SliderHighScores(props) {
   } else {
     return (
       <>
-        <div className="modal-container">
+        <div className="modal-container highscores">
           <p className="closeBtn" onClick={onClose}>x</p>
           <div className="modal-content">
             <div>

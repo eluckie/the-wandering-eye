@@ -66,7 +66,7 @@ This webpage acts as an interactive photo portfolio for my personal landscape ph
 >* **coming soon**
 
 
-## Gameplay
+<!-- ## Gameplay
 
 #### select game
 ![play landing page](./src//img//choosegame.png)
@@ -82,7 +82,7 @@ _when in the correct position, tile has inner border_\
 ![jumbled tiles with selected tiles switched](./src/img/turn2.png)
 
 #### on game win
-![full photo of green lizard from jumbled tiles](./src/img/gamewin.png)
+![full photo of green lizard from jumbled tiles](./src/img/gamewin.png) -->
 
 
 ## Zine View
@@ -122,7 +122,8 @@ https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5
 * create webapi to browse photos (NoSQL)
 * user upload to create custom sliding puzzles on demand?
 * custom domain
-<!-- * EASTER EGG - hidden onClick that does annoying little window.alert popup -->
+<!-- * EASTER EGG - hidden onClick that does annoying little window.alert popup
+* update screenshots in README -->
 
 
 ## License
