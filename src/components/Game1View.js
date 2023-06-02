@@ -19,16 +19,20 @@ function Game1(props) {
   
   const tileWrapperStyle = {
     width: `${difficulty * tileWidth}px`
-  };
+  }
   
   const tileContainerStyle = {
     gridTemplateColumns: `repeat(${difficulty}, ${tileWidth}px)`
-  };
+  }
+
+  const zIndex = {
+    zIndex: "-1"
+  }
 
   if (gameComplete) {
     if (imageNumber === 1) {
       return (
-        <img src={Puzzle1} alt="view of Denver skyline visible through bushes along the bottom of the frame with the city mirror-reflected in a lake"/>
+        <img style={zIndex} src={Puzzle1} alt="view of Denver skyline visible through bushes along the bottom of the frame with the city mirror-reflected in a lake"/>
       );
     } else if (imageNumber === 2) {
       return (
