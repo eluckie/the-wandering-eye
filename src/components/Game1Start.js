@@ -48,6 +48,12 @@ GameStart.propTypes = {
   onInitGame1: PropTypes.func
 };
 
+const mapStateToProps = (state) => {
+  return {
+    gameComplete: false
+  };
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     onInitGame1: (imageNumber) => {
@@ -55,8 +61,8 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(shuffleTiles());
     }
   };
-};
+}
 
-const Game1Start = connect(null, mapDispatchToProps)(GameStart);
+const Game1Start = connect(mapStateToProps, mapDispatchToProps)(GameStart);
 
 export default Game1Start;
