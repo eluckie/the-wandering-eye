@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Instructions from "./Game1Instructions";
 import HighScores from "./Game1HighScores";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NewHighScore from "./NewHighScore";
-
-// implement useEffect ? [levelScores]
+import db from './../firebase.js';
+import { collection, addDoc, onSnapshot } from "firebase/firestore";
 
 function GameStatus(props) {
   const { gameComplete, turnNo, imageNumber, difficulty } = props;
@@ -14,75 +14,67 @@ function GameStatus(props) {
 
   const [openInstructions, setOpenInstructions] = useState(false);
   const [openHighScores, setOpenHighScores] = useState(false);
-  const [level3Scores, setLevel3Scores] = useState([{key: 0, id: 0, name: "PLACEHOLDER", score: 1000}]);
-  const [level4Scores, setLevel4Scores] = useState([{key: 0, id: 0, name: "PLACEHOLDER", score: 99999}]);
-  const [level5Scores, setLevel5Scores] = useState([{key: 0, id: 0, name: "PLACEHOLDER", score: 99999}]);
-  const [level6Scores, setLevel6Scores] = useState([{key: 0, id: 0, name: "PLACEHOLDER", score: 99999}]);
+  const [highScoresList, setHighScoresList] = useState([]);
+  const [error, setError] = useState(null);
+
+  function compare(a, b) {
+    let comparison;
+    if (a.score > b.score) {
+      comparison = 1;
+    } else if (a.score < b.score) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
+  let level3 = highScoresList.filter(entry => entry.difficulty === 3);
+  const level3Scores = level3.sort(compare);
+  level3Scores.length = 10;
+  let level4Scores = highScoresList.filter(entry => entry.difficulty === 4);
+  let level5Scores = highScoresList.filter(entry => entry.difficulty === 5);
+  let level6Scores = highScoresList.filter(entry => entry.difficulty === 6);
 
   const firstScoreMsg = <h3>your {score} moves got the first high score for {difficulty}x{difficulty}!</h3>
 
   const newScoreMsg = <h3>your {score} moves got a new high score for {difficulty}x{difficulty}</h3>
 
-  const handleAddingNewScore = (newAddition) => {
-    const nameToAdd = newAddition.name;
-    const scoreToAdd = newAddition.score;
-    console.log("newAddition: ", newAddition);
+  const handleAddingNewScore = async (newAddition) => {
+    await addDoc(collection(db, "puzzleHighScores"), newAddition);
+    console.log("added to db! ", newAddition);
+  }
 
-    if (difficulty === 3) {
-      let newLevel3Scores = [...level3Scores];
-      console.log("level3Scores: ", level3Scores);
-
-      if (scoreToAdd < newLevel3Scores[newLevel3Scores.length - 1].score) {
-        for (let i = 0; i < newLevel3Scores.length; i++) {
-          let currentObject = newLevel3Scores[i];
-          let currentIndex = currentObject.key;
-          console.log("currentObject: ", currentObject);
-
-          if (scoreToAdd < currentObject.score && newLevel3Scores.length > 0) {
-            newLevel3Scores.push({
-              key: currentIndex,
-              id: currentIndex,
-              name: nameToAdd,
-              score: scoreToAdd
-            });
-          } else {
-            newLevel3Scores.push({
-              key: currentIndex,
-              id: currentIndex,
-              name: currentObject.name,
-              score: currentObject.score
-            });
-          }
-          console.log("newLevel3Scores: ", newLevel3Scores);
-          return newLevel3Scores;
-        }
-        setLevel3Scores(newLevel3Scores);
+  useEffect(() => {
+    const unSubscribe = onSnapshot(
+      collection(db, "puzzleHighScores"),
+      (collectionSnapshot) => {
+        const scores = [];
+        collectionSnapshot.forEach((doc) => {
+          scores.push({
+            ...doc.data(),
+            id: doc.id
+          });
+        });
+        setHighScoresList(scores);
+      },
+      (error) => {
+        setError(error.message);
       }
-    } else {
-      let newLevel4Scores = [];
-      if (scoreToAdd > level4Scores[level4Scores.length - 1].score) {
-        for (let i = 1; i < level4Scores.length; i++) {
-          let currentObject = level4Scores[i];
-          if (scoreToAdd > currentObject.score) {
-            newLevel4Scores.concat({
-              key: newLevel4Scores[i],
-              id: newLevel4Scores[i],
-              name: currentObject.name,
-              score: currentObject.score
-            });
-          } else {
-            newLevel4Scores.concat({
-              key: newLevel4Scores[i],
-              id: newLevel4Scores[i],
-              name: nameToAdd,
-              score: scoreToAdd
-            });
-          }
-        }
-        console.log("newLevel4Scores: ", newLevel4Scores);
-        setLevel4Scores(newLevel4Scores);
-      }
-    }
+    );
+    return () => unSubscribe();
+  }, []);
+
+  let addScoreForm;
+
+  if (error) {
+    addScoreForm = <p>There was an error adding your score: {error}</p>
+  } else {
+    addScoreForm =
+      <>
+        <NewHighScore
+          score={score}
+          difficulty={difficulty}
+          addNewScore={handleAddingNewScore}/>
+      </>
   }
 
   if (gameComplete) {
@@ -91,18 +83,14 @@ function GameStatus(props) {
         return (
           <>
             {firstScoreMsg}
-            <NewHighScore
-              score={score}
-              addNewScore={handleAddingNewScore}/>
+            {addScoreForm}
           </>
         );
       } else if (score < level3Scores[level3Scores.length - 1].score) {
         return (
           <>
             {newScoreMsg}
-            <NewHighScore
-              score={score}
-              addNewScore={handleAddingNewScore}/>
+            {addScoreForm}
           </>
         );
       }
@@ -111,12 +99,14 @@ function GameStatus(props) {
         return (
           <>
             {firstScoreMsg}
+            {addScoreForm}
           </>
         );
       } else if (score < level4Scores[level4Scores.length - 1].score) {
         return (
           <>
             {newScoreMsg}
+            {addScoreForm}
           </>
         );
       }
@@ -125,12 +115,14 @@ function GameStatus(props) {
         return (
           <>
             {firstScoreMsg}
+            {addScoreForm}
           </>
         );
       } else if (score < level5Scores[level5Scores.length - 1].score) {
         return (
           <>
             {newScoreMsg}
+            {addScoreForm}
           </>
         );
       }
@@ -139,12 +131,14 @@ function GameStatus(props) {
         return (
           <>
             {firstScoreMsg}
+            {addScoreForm}
           </>
         );
       } else if (score < level3Scores[level3Scores.length - 1].score) {
         return (
           <>
             {newScoreMsg}
+            {addScoreForm}
           </>
         );
       }

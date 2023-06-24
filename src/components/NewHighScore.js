@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 
 function NewHighScore(props) {
-  const { score, addNewScore } = props;
+  const { score, difficulty, addNewScore } = props;
 
   const handleAddNewScore = (e) => {
     e.preventDefault();
     addNewScore({
       name: e.target.name.value,
-      score
+      score,
+      difficulty
     });
   }
 
@@ -28,6 +29,7 @@ function NewHighScore(props) {
 
 NewHighScore.propTypes = {
   score: PropTypes.number,
+  difficulty: PropTypes.number,
   addNewScore: PropTypes.func
 }
 
