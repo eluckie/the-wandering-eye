@@ -114,16 +114,18 @@ https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5
 
 ## Known Bugs
 
-* No known bugs.
+* Text on instructions overflow from modal on mobile
 
 
 ## Stretch Plans
 * add high scores board for games
 * create webapi to browse photos (NoSQL)
 * user upload to create custom sliding puzzles on demand?
+<!-- 
+* EASTER EGG - hidden onClick that does annoying little window.alert popup
+* update screenshots in README
 * custom domain
-<!-- * EASTER EGG - hidden onClick that does annoying little window.alert popup
-* update screenshots in README -->
+-->
 
 
 ## License
