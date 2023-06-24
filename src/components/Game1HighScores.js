@@ -38,7 +38,7 @@ function PuzzleHighScores(props) {
   if (viewLevel > 0) {
     if (viewLevel === 3) {
       divStyle.backgroundImage = `url('${Level3}')`;
-      if (level3Scores.length < 1) {
+      if (!level3Scores[0]) {
         scoreboard = 
           <>
             <br/><br/>
@@ -61,7 +61,7 @@ function PuzzleHighScores(props) {
         }
       } else if (viewLevel === 4) {
         divStyle.backgroundImage = `url('${Level4}')`;
-        if (level4Scores.length < 1) {
+        if (!level4Scores[0]) {
           scoreboard = 
             <>
               <br/><br/>
@@ -83,7 +83,7 @@ function PuzzleHighScores(props) {
         }
       } else if (viewLevel === 5) {
         divStyle.backgroundImage = `url('${Level5}')`;
-        if (level5Scores.length < 1) {
+        if (!level5Scores[0]) {
           scoreboard = 
             <>
               <br/><br/>
@@ -105,7 +105,7 @@ function PuzzleHighScores(props) {
         }
       } else {
         divStyle.backgroundImage = `url('${Level6}')`;
-        if (level6Scores.length < 1) {
+        if (!level6Scores[0]) {
           scoreboard = 
             <>
               <br/><br/>

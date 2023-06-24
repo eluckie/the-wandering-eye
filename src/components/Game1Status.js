@@ -29,10 +29,17 @@ function GameStatus(props) {
 
   let level3 = highScoresList.filter(entry => entry.difficulty === 3);
   const level3Scores = level3.sort(compare);
+  let level4 = highScoresList.filter(entry => entry.difficulty === 4);
+  const level4Scores = level4.sort(compare);
+  let level5 = highScoresList.filter(entry => entry.difficulty === 5);
+  const level5Scores = level5.sort(compare);
+  let level6 = highScoresList.filter(entry => entry.difficulty === 6);
+  const level6Scores = level6.sort(compare);
+
   level3Scores.length = 10;
-  let level4Scores = highScoresList.filter(entry => entry.difficulty === 4);
-  let level5Scores = highScoresList.filter(entry => entry.difficulty === 5);
-  let level6Scores = highScoresList.filter(entry => entry.difficulty === 6);
+  level4Scores.length = 10;
+  level5Scores.length = 10;
+  level6Scores.length = 10;
 
   const firstScoreMsg = <h3>your {score} moves got the first high score for {difficulty}x{difficulty}!</h3>
 
@@ -79,66 +86,118 @@ function GameStatus(props) {
 
   if (gameComplete) {
     if (difficulty === 3) {
-      if (level3Scores.length === 0) {
+      const lastScore = level3Scores.slice(-1);
+      const lastIndex = level3Scores[level3Scores.length - 1];
+
+      if (!level3Scores[0]) {
         return (
           <>
             {firstScoreMsg}
             {addScoreForm}
           </>
         );
-      } else if (score < level3Scores[level3Scores.length - 1].score) {
+      } 
+      else if (!lastIndex || score < lastScore[0].score) {
         return (
           <>
             {newScoreMsg}
             {addScoreForm}
+          </>
+        );
+      } else {
+        return (
+          <>
+            <br/>
+            <h2>You used {score} turns</h2>
+            <p>choose another color</p>
+            <br/>
           </>
         );
       }
     } else if (difficulty === 4) {
-      if (level4Scores.length === 0) {
+      const lastScore = level4Scores.slice(-1);
+      const lastIndex = level4Scores[level4Scores.length - 1];
+
+      if (!level4Scores[0]) {
         return (
           <>
             {firstScoreMsg}
             {addScoreForm}
           </>
         );
-      } else if (score < level4Scores[level4Scores.length - 1].score) {
+      } 
+      else if (!lastIndex || score < lastScore[0].score) {
         return (
           <>
             {newScoreMsg}
             {addScoreForm}
+          </>
+        );
+      } else {
+        return (
+          <>
+            <br/>
+            <h2>You used {score} turns</h2>
+            <p>choose another color</p>
+            <br/>
           </>
         );
       }
     } else if (difficulty === 5) {
-      if (level5Scores.length === 0) {
+      const lastScore = level5Scores.slice(-1);
+      const lastIndex = level5Scores[level5Scores.length - 1];
+
+      if (!level5Scores[0]) {
         return (
           <>
             {firstScoreMsg}
             {addScoreForm}
           </>
         );
-      } else if (score < level5Scores[level5Scores.length - 1].score) {
+      } 
+      else if (!lastIndex || score < lastScore[0].score) {
         return (
           <>
             {newScoreMsg}
             {addScoreForm}
+          </>
+        );
+      } else {
+        return (
+          <>
+            <br/>
+            <h2>You used {score} turns</h2>
+            <p>choose another color</p>
+            <br/>
           </>
         );
       }
     } else if (difficulty === 6) {
-      if (level6Scores.length === 0) {
+      const lastScore = level6Scores.slice(-1);
+      const lastIndex = level6Scores[level6Scores.length - 1];
+
+      if (!level6Scores[0]) {
         return (
           <>
             {firstScoreMsg}
             {addScoreForm}
           </>
         );
-      } else if (score < level3Scores[level3Scores.length - 1].score) {
+      } 
+      else if (!lastIndex || score < lastScore[0].score) {
         return (
           <>
             {newScoreMsg}
             {addScoreForm}
+          </>
+        );
+      } else {
+        return (
+          <>
+            <br/>
+            <h2>You used {score} turns</h2>
+            <p>choose another color</p>
+            <br/>
           </>
         );
       }

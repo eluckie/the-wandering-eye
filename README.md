@@ -115,6 +115,7 @@ https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5
 ## Known Bugs
 
 * Text on instructions overflow from modal on mobile
+* New high scores form does not hide onSubmit, can add same name * score multiple times to db > should re-route to show high scores modal
 
 
 ## Stretch Plans
