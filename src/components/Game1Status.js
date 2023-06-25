@@ -41,9 +41,9 @@ function GameStatus(props) {
   level5Scores.length = 10;
   level6Scores.length = 10;
 
-  const firstScoreMsg = <h3>your {score} moves got the first high score for {difficulty}x{difficulty}!</h3>
+  const firstScoreMsg = <h3>you got the first high score for {difficulty}x{difficulty}!</h3>
 
-  const newScoreMsg = <h3>your {score} moves got a new high score for {difficulty}x{difficulty}</h3>
+  const newScoreMsg = <h3>you got a new high score for {difficulty}x{difficulty}!</h3>
 
   const handleAddingNewScore = async (newAddition) => {
     await addDoc(collection(db, "puzzleHighScores"), newAddition);
@@ -67,13 +67,15 @@ function GameStatus(props) {
         setError(error.message);
       }
     );
-    return () => unSubscribe();
-  }, []);
+    return () => {
+      unSubscribe();
+    }
+  }, [highScoresList]);
 
   let addScoreForm;
 
   if (error) {
-    addScoreForm = <p>There was an error adding your score: {error}</p>
+    addScoreForm = <p>there was an error adding your score: {error}</p>
   } else {
     addScoreForm =
       <>
@@ -97,7 +99,7 @@ function GameStatus(props) {
           </>
         );
       } 
-      else if (!lastIndex || score < lastScore[0].score) {
+      else if ((!lastIndex || score < lastScore[0].score)) {
         return (
           <>
             {newScoreMsg}

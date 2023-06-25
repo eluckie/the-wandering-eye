@@ -115,11 +115,12 @@ https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5
 ## Known Bugs
 
 * Text on instructions overflow from modal on mobile
-* New high scores form does not hide onSubmit, can add same name * score multiple times to db > should re-route to show high scores modal
+* Does not prompt to add new high score to board w.o page refresh after already adding one
+<!-- try making into components & see if that fixes render issue -->
 
 
 ## Stretch Plans
-* add high scores board for games
+* add input validation/error handling for high scores
 * create webapi to browse photos (NoSQL)
 * user upload to create custom sliding puzzles on demand?
 <!-- 
