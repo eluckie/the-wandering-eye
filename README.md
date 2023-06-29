@@ -23,8 +23,7 @@ _{add clickable or dropdown}_ -->
 * Framer Motion
 * Canva
 * Git
-<!-- * NoSQL backend -->
-<!-- * Firebase hosting -->
+* Firebase
 
 ## Setup/Installation Requirements
 
@@ -100,7 +99,7 @@ _when in the correct position, tile has inner border_\
 https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5-93d0-462a81ad553f -->
 
 
-## Diagrams
+<!-- ## Diagrams
 
 #### Site Diagram
 ![site diagram](./src/img/capstone-site-diagram.png)
@@ -109,13 +108,12 @@ https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5
 ![component diagram](./src/img/capstone-component-diagram.png)
 
 #### Landing Pages
-![diagram of landing pages for home, zine, play, and about me pages](./src/img/capstone-landing-pages.png)
+![diagram of landing pages for home, zine, play, and about me pages](./src/img/capstone-landing-pages.png) -->
 
 
 ## Known Bugs
 
 * Text on instructions overflow from modal on mobile
-* Does not prompt to add new high score to board w.o page refresh after already adding one
 <!-- try making into components & see if that fixes render issue -->
 
 

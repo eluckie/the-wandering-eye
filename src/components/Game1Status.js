@@ -47,6 +47,8 @@ function GameStatus(props) {
 
   const handleAddingNewScore = async (newAddition) => {
     await addDoc(collection(db, "puzzleHighScores"), newAddition);
+    const form = document.getElementById("score-form");
+    form.style.display = "none";
     console.log("added to db! ", newAddition);
   }
 
@@ -70,7 +72,7 @@ function GameStatus(props) {
     return () => {
       unSubscribe();
     }
-  }, [highScoresList]);
+  }, []);
 
   let addScoreForm;
 
@@ -78,12 +80,12 @@ function GameStatus(props) {
     addScoreForm = <p>there was an error adding your score: {error}</p>
   } else {
     addScoreForm =
-      <>
+      <div id="score-form">
         <NewHighScore
           score={score}
           difficulty={difficulty}
           addNewScore={handleAddingNewScore}/>
-      </>
+      </div>
   }
 
   if (gameComplete) {
