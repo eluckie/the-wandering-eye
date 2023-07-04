@@ -16,10 +16,10 @@ function CollapsibleNavbar() {
             <Link to="/"><h3>home</h3></Link>
           </div>
           <div className="item">
-            <Link to="/browse"><h3>browse</h3></Link>
+            <Link to="/browse"><h3>browse </h3></Link>
           </div>
           <div className="item">
-            <Link to="/zine"><h3>zine</h3></Link>
+            <Link to="/zine"><h3> zine</h3></Link>
           </div>
           <div className="item">
             <Link to="/play"><h3>play</h3></Link>
