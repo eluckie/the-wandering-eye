@@ -116,6 +116,7 @@ https://github.com/eluckie/the-wandering-eye/assets/121265815/8a52db70-36e0-45a5
 * Does not show direction to "choose new color" after adding high score
 * If user navigates away from gameplay when prompted for score (before/after adding) & then navigates back to page, user is prompted to enter name again
 * Text on instructions overflow from modal on mobile
+* Clicking outside of navbar while open should close navbar or be disabled until navbar is closed
 <!-- try making into components & see if that fixes render issue -->
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './../src/css/index.css';
 import './../src/css/Game.css';
+import './../src/css/Navbar.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import rootReducer from "./reducers/index";
