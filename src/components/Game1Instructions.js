@@ -150,9 +150,9 @@ function PuzzleInstructions(props) {
               <br/>
               <p>once all tiles are in the correct position,</p>
               <h3>you won!</h3>
-              <p>if you get a high score, you will be able to enter your name.*</p>
+              <p>if you get a high score, you will be able to enter your name.</p>
               <br/>
-              <p style={tinyRedFont}>*scoreboard coming soon.</p>
+              <p style={tinyRedFont}>click a color on the color palette to start a new game.</p>
               <p className="hover" onClick={showStep3} style={prevButton}>previous</p>
             </div>
           </div>
