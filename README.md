@@ -37,7 +37,7 @@ _{add clickable or dropdown}_ -->
 
 This webpage acts as an interactive photo portfolio for my personal landscape photographs. From the navbar on each page, users are able to navigate to the ``home``, ``zine``, ``play``, or ``about`` pages. On the home page, if you click on the site's logo, it will also take you to the ``browse`` page - a current work-in-progress.
 
-[Click here](https://thewanderingeye.netlify.app/) to view the live version of this webpage.
+[Click here](https://the-wandering-eye.web.app/) to view the live version of this webpage.
 
 #### Zine
 >* has clickable options to view the video or pages version of the digital zine
